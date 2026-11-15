@@ -1,0 +1,51 @@
+correct,score,methode,dist_m,nom_a,nom_b,cat_a,cat_b,adresse_a,adresse_b,commune,a,b
+,0.915,proximite,8,Nature Decouvertes,Nature & Découvertes,commerce,commerce,CENTRE COMMERCIAL ODYSSEUM ZAC DU PORT MARIANNE,,MONTPELLIER,acceslibre:97cb4978-3ce8-47e2-96c1-aba80f827656,osm:node/1673415160
+,0.847,proximite,27,la grande pharmacie by mediprix,La Grande Pharmacie,sante,sante,600 Avenue Marcel Pagnol,,Pérols,acceslibre:a4e847cf-e08a-457e-aaa6-3fc9cce2b1ad,osm:node/4183129940
+,0.953,proximite,4,SHAKE BEEF PORTMARIANNE,Shake Beef,restauration,restauration,226 Rue Vendémiaire,226 Rue Vendémiaire,Montpellier,acceslibre:c74323b4-2144-44d7-bb32-36ca487bdc2e,osm:node/1718509155
+,0.936,proximite,3,Institut Tout Au Féminin,Tout au feminin,commerce,commerce,23 Quai Aspirant Herber,23 Quai Aspirant Herber,Sète,acceslibre:ef575566-dc5c-4a86-8f46-93848ba726c8,osm:node/2455725189
+,0.862,proximite,47,Le Jardin des Fleurs,Le Jardin des Fleurs,commerce,commerce,Route de Sète,2 Route de Sète,Balaruc-les-Bains,acceslibre:e2795f76-0ed8-4891-8f34-bdd527fac243,osm:node/10963953684
+,0.983,proximite,13,Pâtisserie Thurotte,Pâtisserie Thurotte,commerce,commerce,20 Rue Doyen Renè Gosse,20 Rue Doyen René Gosse,Clermont-l'Hérault,acceslibre:fd327590-6363-4362-9b7c-9f3587570eb6,osm:node/14255153467
+,0.889,proximite,27,City Shop,City Shop,commerce,commerce,394 Chemin de Moularès,,Montpellier,acceslibre:d042dd97-db12-4d16-876d-31c1b24abf2d,osm:node/1714516919
+,0.895,proximite,23,La Brioche Dorée,Brioche Dorée,commerce,commerce,82 Allée Jules Milhau,,Montpellier,acceslibre:67a4e310-beec-4a20-b1ec-6436bcdc4482,osm:node/635869685
+,0.864,proximite,46,Mairie de Notre-Dame-de-Londres,Mairie de Notre-Dame-de-Londres,service,service,Avenue du Pic Saint Loup,,Notre-Dame-de-Londres,acceslibre:033404d0-b73c-4a1e-9e83-41d369743e0b,osm:way/323075693
+,0.881,proximite,1,OR EN CASH Montpellier,Or en Cash,commerce,commerce,43 Avenue de Toulouse,,Montpellier,acceslibre:92d69433-3364-4f62-9a68-e5a3a08a09a0,osm:node/1983024103
+,0.911,proximite,10,Pharmacie de la Comédie,Pharmacie de la Comédie,sante,sante,1 Rue de Verdun,,Montpellier,acceslibre:d0cccf7f-9c5d-4eb6-8b1d-cffb7b6edd74,osm:node/600736628
+,0.826,proximite,43,Brit Hotel Clermont L'Herault,Brit Hotel,hebergement,hebergement,12 Rue du Mourvedre,,Clermont-l'Hérault,acceslibre:ce9343fa-ff27-4eef-bf40-a71576368d22,osm:way/98021211
+,0.915,proximite,8,Mairie - Grabels,Mairie de Grabels,service,service,1 Place Jean Jaures,,Grabels,acceslibre:222c3b67-4b3b-411a-b65c-4118128ed984,osm:way/482257171
+,0.893,proximite,24,Ma boucherie,Ma boucherie,commerce,commerce,Place de la Mairie,10 Place de la Mairie,Saint-Martin-de-Londres,acceslibre:2de31234-57f5-4355-bbe5-9c7de093e9eb,osm:node/3808228554
+,0.886,proximite,29,Mairie - Saint-Jean-de-Védas,Mairie de Saint-Jean-de-Védas,service,service,4 rue de la Mairie,,Saint-Jean-de-Védas,acceslibre:9af648e9-0a4c-47c0-b323-999c494e64d9,osm:way/109896630
+,0.878,proximite,4,Office de Tourisme Intercommunal Saint-Guilhem - Vallée de l'Hérault - Site de Saint-Guilhem-le-Désert,Office de tourisme,info,info,2 Place de la Liberté,,Saint-Guilhem-le-Désert,acceslibre:7a5af611-6cbc-4438-b1b7-90de427243a3,osm:node/4884031454
+,0.888,proximite,28,Picard,Picard,commerce,commerce,68 Route de Saint Georges d’Orques,,Juvignac,acceslibre:4c421223-a3b6-45cd-8569-74d978c76073,osm:way/249368040
+,0.954,proximite,3,Keepcool Sète,KeepCool,service,service,5 Quai Aspirant Herber,5 Quai de l'Aspirant Herber,Sète,acceslibre:2dfc9f06-c12c-4332-becb-8da87844b655,osm:node/2482538447
+,0.879,proximite,3,Kyriad Montpellier Ouest St Jean de Védas - A709,Kyriad,hebergement,hebergement,Rue Robert Schuman,22B Rue Robert Schuman,Saint-Jean-de-Védas,acceslibre:e4f1cee8-3d44-4d62-921f-6e7fda8fc3f9,osm:way/109894581
+,0.863,proximite,15,Mairie,Mairie de La Salvetat-sur-Agout,service,service,Place Compostelle,,La Salvetat-sur-Agout,acceslibre:d7a64e8d-ab90-4ba2-8233-0ed6a6ab1bb9,osm:way/135444309
+,0.981,proximite,14,Le Barry du Grand Chemin,Le Barry du Grand Chemin,hebergement,hebergement,88 Faubourg Saint Martin,88 Faubourg Saint-Martin,Le Caylar,acceslibre:680aeae0-ed56-4aff-9913-28855e656483,osm:node/272829918
+,0.884,proximite,30,Mairie de Tourbes,Mairie de Tourbes,service,service,Place de la Mairie,6 Avenue d'Alignan,Tourbes,acceslibre:03cd5d61-f4b7-4567-8e2c-fc91007c2ccb,osm:node/4743046301
+,0.887,proximite,6,Rev Hotel,Rev'Hôtel,hebergement,hebergement,2 Avenue du Docteur Menard,1 Impasse Alzieu,Lamalou-les-Bains,acceslibre:e9bcba03-afb7-4223-9c71-ba08e25a2e12,osm:node/2590882495
+,0.98,proximite,15,Le Prose Hôtel,Le Prose,hebergement,hebergement,277 Allee du Vaccares,277 Allée du Vaccarès,La Grande-Motte,acceslibre:8d7ae146-ca04-49b6-ae1a-a6b66012330c,osm:way/66623403
+,0.984,proximite,12,Pharmacie Du Grand Mail,Pharmacie du Grand Mail,sante,sante,505 Avenue de Barcelone,505 Avenue de Barcelone,Montpellier,acceslibre:1dfd42f4-825a-4185-86d3-b7b286a9355a,osm:node/697349748
+,0.847,proximite,13,Jean de la Fontaine,Médiathèque Jean de la Fontaine,service,service,Avenue du Château,Avenue du Château,Lavérune,acceslibre:1dd0dd82-48e4-4087-a3f0-e10f8dabfa63,osm:node/4059574503
+,0.976,proximite,18,Mairie - Alignan-du-Vent,Mairie d'Alignan-du-Vent,service,service,3 Place de la Mairie,3 Place de la Mairie,Alignan-du-Vent,acceslibre:19ff1a28-151b-4dd6-96db-5ec659647bb1,osm:way/361735854
+,0.921,proximite,3,Royal Hôtel,Royal Hôtel,hebergement,hebergement,8 Rue de Maguelone,,Montpellier,acceslibre:fb644f5d-7b55-43f6-8393-47b081abd096,osm:node/616106079
+,0.892,proximite,13,Carrefour Express,Carrefour Express,commerce,commerce,2 Corniche de Neuburg,2 Route de la Corniche de Neuburg,Sète,acceslibre:1f19af06-ad22-434c-925e-217228b39325,osm:way/135812049
+,0.834,proximite,69,Médiathèque de Lattes,Médiathèque de Lattes,service,service,place du maréchal delattre de tassigny,Place Jean de Lattre de Tassigny,Lattes,acceslibre:aa2d0e95-e373-43d2-bc14-d2ccf854aac1,osm:node/4298584981
+,0.923,proximite,2,Mairie - Saint-Vincent-d'Olargues,Mairie de Saint-Vincent-d'Olargues,service,service,Le Village,,Saint-Vincent-d'Olargues,acceslibre:1d7a4c43-7679-4117-b396-aaf2e7b13387,osm:way/1220395158
+,0.989,proximite,8,Médiathèque André Malraux,Médiathèque André Malraux,service,service,1 Place du 14 Juillet,1 Place du 14 Juillet,Béziers,acceslibre:be853d1a-3111-4680-a489-82a7bb7c5a7d,osm:way/133222256
+,0.877,proximite,5,century 21 agence des halles,Century 21,service,service,17 Rue Alsace Lorraine,,Sète,acceslibre:a367640d-49a8-433d-9e93-aaa8dfbf95ed,osm:node/2455699379
+,0.886,proximite,18,Médiathèque Albert Camus,Médiathèque Albert Camus,service,service,12 Rue Albert Camus,12 avenue Albert Camus,Clapiers,acceslibre:d1adc695-f188-4efe-9c49-b34a8de7e4e1,osm:relation/14205308
+,0.851,proximite,24,Mairie,Mairie de Bassan,service,service,17 Rue du Chemin Neuf,,Bassan,acceslibre:5ae83459-81bf-493b-bf11-d9139988fc29,osm:node/1577041171
+,0.919,proximite,5,Les Createurs,Les Créateurs,commerce,commerce,22 Boulevard d'Orient,,Montpellier,acceslibre:8b16bbb6-0eb8-46a4-87b0-1a8fbcc979a5,osm:node/1714517016
+,0.924,proximite,1,Foot Locker,Foot Locker,commerce,commerce,8 Place de la Comédie,,Montpellier,acceslibre:f12837d1-62e5-4fe7-b876-017784e15043,osm:node/2950814134
+,0.906,proximite,14,Le Travelling,Le Travelling,activite,activite,48 Rue Jean Roger,Rue Brescou,Agde,acceslibre:61f38c24-2fca-47db-be58-0117bf30c4b9,osm:way/72092916
+,0.88,proximite,8,Office de Tourisme de Palavas-les-Flots,OFFICE DE TOURISME,info,info,,LE PHARE DE LA MEDITERRANEE PLACE DE LA MEDITERRANEE,PALAVAS-LES-FLOTS,osm:node/2231705309,th:th-688462c6
+,0.92,proximite,4,Piscine Les Néréides,Piscine des Néréïdes,service,service,10 Chemin des Courreges,,Lattes,acceslibre:048712f7-a294-423b-99df-7dc5ce62eead,osm:way/299322521
+,0.866,proximite,45,Mairie - Brenas,Mairie de Brenas,service,service,Le Village,,Brenas,acceslibre:4e073170-2cd3-4df3-b1a4-6e1fc7afe84c,osm:node/11026849177
+,0.839,proximite,8,Musee medard,Médard,activite,activite,71 Place des Martyrs de la Resistance,71 Place des Martyrs de la Résistance,Lunel,acceslibre:656f9749-5914-494c-b244-e6f22dcf2159,osm:way/742164185
+,0.967,proximite,24,La Bergerie Du Cap,La Bergerie du Cap,hebergement,hebergement,4 Avenue de Cassiopée,4 Avenue de Cassiopée,Agde,acceslibre:3c0e9fae-f6f6-45ee-9991-ebbb2006da31,osm:way/48268247
+,0.921,proximite,3,Mairie - Le Bosc,Mairie du Bosc,service,service,4 Route de Lodeve,,Le Bosc,acceslibre:2ca17630-52c8-456b-88fb-c8deddbbf000,osm:node/11026623880
+,0.922,proximite,2,Mairie - Viols-le-Fort,Mairie de Viols-le-Fort,service,service,6 Plan du Quai,,Viols-le-Fort,acceslibre:5e623b5f-1ab5-4d7b-880c-19ebd5c941f8,osm:way/161372406
+,0.977,proximite,17,Mairie - Boujan-sur-Libron,Mairie de Boujan-sur-Libron,service,service,12 rue de la Mairie,12 Rue de la Mairie,Boujan-sur-Libron,acceslibre:f756fce3-872f-42e0-874f-ed75187c6f92,osm:node/6664944294
+,0.88,proximite,2,Toute la Maree du Clapas,Toute la Marée,commerce,commerce,1 Rue Proudhon,,Montpellier,acceslibre:96f619c2-2a43-41fd-8dd3-77e0f53f3d9b,osm:node/620890527
+,0.845,proximite,4,Traiteur du sud (Boucherie des Saveurs),Boucherie des Saveurs,commerce,commerce,18 Rue Fernand Soubeyran,18 Rue Fernand Soubeyran,Jacou,acceslibre:9b2aebea-bae6-4355-b9ca-c84623d8fda5,osm:node/1604859873
+,0.858,proximite,19,Orpi Proximmo Montpellier,Orpi,service,service,53 Place Thermidor,,Montpellier,acceslibre:2b193c46-49cf-4f98-875e-211ca4f2ab70,osm:node/6236104886
+,0.915,proximite,7,Mairie - Cruzy,Mairie de Cruzy,service,service,2 Place Jean Jaures,,Cruzy,acceslibre:5c5c4fa1-8ae5-4705-81b1-7f1f6f1d41f6,osm:node/4149017471

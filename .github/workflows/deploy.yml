@@ -1,0 +1,54 @@
+# Publie la maquette sur GitHub Pages à chaque push sur main.
+# Réglage à faire une fois : Settings > Pages > Source : « GitHub Actions ».
+name: Déployer sur GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # Fabrique public/data/ à partir de data/raw/ (hors ligne).
+      - run: pnpm etl
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      # Le site est servi sous /<nom-du-dépôt>.
+      - run: pnpm build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_TALLY_URL: ${{ vars.NEXT_PUBLIC_TALLY_URL }}
+      # Empêche Jekyll d'ignorer le dossier _next.
+      - run: touch out/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

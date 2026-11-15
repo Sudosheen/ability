@@ -1,0 +1,34 @@
+[
+ {
+  "index": 40,
+  "lng": 3.702243,
+  "lat": 43.874299,
+  "score": 0.4569710263929619,
+  "libelle": "Rue du Château 34190 Brissac",
+  "type": "street"
+ },
+ {
+  "index": 54,
+  "lng": 3.215308,
+  "lat": 43.345982,
+  "score": 0.4155166233766233,
+  "libelle": "Rue du Touat 34500 Béziers",
+  "type": "street"
+ },
+ {
+  "index": 55,
+  "lng": 3.215308,
+  "lat": 43.345982,
+  "score": 0.4155166233766233,
+  "libelle": "Rue du Touat 34500 Béziers",
+  "type": "street"
+ },
+ {
+  "index": 82,
+  "lng": 3.136549,
+  "lat": 43.313134,
+  "score": 0.3415115702479338,
+  "libelle": "Rue de l’Oppidum 34440 Colombiers",
+  "type": "street"
+ }
+]

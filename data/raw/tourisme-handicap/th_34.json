@@ -1,0 +1,1822 @@
+[
+ {
+  "nom_etablissement": "Chambre d'hôtes La Maison du Caillou",
+  "adresse": "55 impasse des Canhards",
+  "site_web_etablissement": "https://www.maisonducaillou.com",
+  "telephone_etablissement": null,
+  "commune": "BOISSERON",
+  "cp": "34160",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Chambre d'hôtes",
+  "siret": "488143009 00030",
+  "geocodage": {
+   "lon": 4.08158,
+   "lat": 43.754006
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme Beziers Mediterranée Valras Plage",
+  "adresse": "2 square rené Cassin",
+  "site_web_etablissement": "https://www.beziers-in-mediterranee.com",
+  "telephone_etablissement": null,
+  "commune": "VALRAS-PLAGE",
+  "cp": "34350",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "330565045 00011",
+  "geocodage": {
+   "lon": 3.270781,
+   "lat": 43.235093
+  }
+ },
+ {
+  "nom_etablissement": "MAS LOUBIAIS",
+  "adresse": "29 chemin de Montfaucon",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": "+33 4 67 93 79 78",
+  "commune": "PUISSERGUIER",
+  "cp": "34620",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.031021,
+   "lat": 43.360662
+  }
+ },
+ {
+  "nom_etablissement": "Villa Capimont Studio Source Bourges",
+  "adresse": "33 avenue de la Lande",
+  "site_web_etablissement": "https://www.villacapimont.fr",
+  "telephone_etablissement": null,
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.087082,
+   "lat": 43.597157
+  }
+ },
+ {
+  "nom_etablissement": "Eveil et Partage",
+  "adresse": "3 RUE DE COULMIERS",
+  "site_web_etablissement": "https://eveiletpartage.com",
+  "telephone_etablissement": "+33 6 28 04 03 19",
+  "commune": "PUISSERGUIER",
+  "cp": "34620",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Hébergement collectif;Meublé de tourisme",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.036657,
+   "lat": 43.370009
+  }
+ },
+ {
+  "nom_etablissement": "Centre Nautique Manuréva",
+  "adresse": "Avenue de la Gare",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": null,
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Loisir",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Etablissement de loisir",
+  "siret": "213400237 00136",
+  "geocodage": {
+   "lon": 3.688597,
+   "lat": 43.445769
+  }
+ },
+ {
+  "nom_etablissement": "Argileum - Maison de la Poterie",
+  "adresse": "6 rue du Monument",
+  "site_web_etablissement": "https://www.argileum.fr",
+  "telephone_etablissement": "+33 4 67 57 24 39",
+  "commune": "SAINT-JEAN-DE-FOS",
+  "cp": "34150",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "mental",
+   "moteur"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "494316581 00045",
+  "geocodage": {
+   "lon": 3.55131,
+   "lat": 43.701986
+  }
+ },
+ {
+  "nom_etablissement": "Mas Guilhem",
+  "adresse": "Route de Saint Mathieu",
+  "site_web_etablissement": "https://www.masguilhem.pagesperso-orange.fr",
+  "telephone_etablissement": null,
+  "commune": "GUZARGUES",
+  "cp": "34820",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "434618351 00010",
+  "geocodage": {
+   "lon": 3.907546,
+   "lat": 43.737638
+  }
+ },
+ {
+  "nom_etablissement": "Hôtel Ibis Balaruc Sète",
+  "adresse": "3 avenue de la Pinède",
+  "site_web_etablissement": "https://www.accorhotels.com",
+  "telephone_etablissement": "+33 4 67 80 28 00",
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Hôtel",
+  "siret": "498728856 00010",
+  "geocodage": {
+   "lon": 3.685597,
+   "lat": 43.447337
+  }
+ },
+ {
+  "nom_etablissement": "Espace Georges Brassens",
+  "adresse": "67 boulevard Camille Blanc",
+  "site_web_etablissement": "https://www.espace-brassens.fr/",
+  "telephone_etablissement": "+33 4 99 04 76 26",
+  "commune": "SETE",
+  "cp": "34200",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "mental",
+   "moteur"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "213403017 00014",
+  "geocodage": {
+   "lon": 3.664699,
+   "lat": 43.406092
+  }
+ },
+ {
+  "nom_etablissement": "Hôtel Best Western Eurociel",
+  "adresse": "1 avenue du Pont Juvénal",
+  "site_web_etablissement": "https://www.hoteleurociel.fr",
+  "telephone_etablissement": "+33 4 67 07 51 61",
+  "commune": "MONTPELLIER",
+  "cp": "34000",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Hôtel",
+  "siret": "494439466 00017",
+  "geocodage": {
+   "lon": 3.883132,
+   "lat": 43.606424
+  }
+ },
+ {
+  "nom_etablissement": "Musée de la Mer",
+  "adresse": "Rue Jean Vilar",
+  "site_web_etablissement": "https://www.ville-sete.fr",
+  "telephone_etablissement": null,
+  "commune": "SETE",
+  "cp": "34200",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "213403017 00014",
+  "geocodage": {
+   "lon": 3.685039,
+   "lat": 43.394032
+  }
+ },
+ {
+  "nom_etablissement": "Restaurant  Auberge de la Tour",
+  "adresse": "Avenue de Pézenas",
+  "site_web_etablissement": "https://www.aubergedelatour34.com",
+  "telephone_etablissement": "+33 4 67 98 52 01",
+  "commune": "VALROS",
+  "cp": "34290",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Restaurant",
+  "siret": "519765515 00019",
+  "geocodage": {
+   "lon": 3.366444,
+   "lat": 43.422959
+  }
+ },
+ {
+  "nom_etablissement": "Hôtel Inter Hôtel Montpellier Est/ Basilic Hôtel",
+  "adresse": "66 rue du Basilic",
+  "site_web_etablissement": "https://www.interhotel-montpellier-est.com",
+  "telephone_etablissement": null,
+  "commune": "SAINT-AUNES",
+  "cp": "34130",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Hôtel",
+  "siret": "800282147 00019",
+  "geocodage": {
+   "lon": 3.975998,
+   "lat": 43.649265
+  }
+ },
+ {
+  "nom_etablissement": "Caveau de Belle Dame - Restaurant saisonnier",
+  "adresse": "Cave Belle Dame - D116",
+  "site_web_etablissement": "https://www.belledame.fr",
+  "telephone_etablissement": null,
+  "commune": "MIREVAL",
+  "cp": "34110",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "441490018 00013",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Restaurant Porto Pollo",
+  "adresse": "17 quai du Général Durand",
+  "site_web_etablissement": "https://www.restaurant-portopollo.fr",
+  "telephone_etablissement": null,
+  "commune": "SETE",
+  "cp": "34200",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "353566631 00019",
+  "geocodage": {
+   "lon": 3.696796,
+   "lat": 43.401108
+  }
+ },
+ {
+  "nom_etablissement": "Office de tourisme du Pays de Lunel",
+  "adresse": "16 Cours Gabriel Péri",
+  "site_web_etablissement": "https://www.ot-paysdelunel.fr",
+  "telephone_etablissement": "+33 4 67 71 01 37",
+  "commune": "LUNEL",
+  "cp": "34400",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "501363766 00012",
+  "geocodage": {
+   "lon": 4.1342,
+   "lat": 43.674742
+  }
+ },
+ {
+  "nom_etablissement": "HOTEL OPERALIA LES PINS",
+  "adresse": "24 AVENUE PASTEUR",
+  "site_web_etablissement": "https://www.operalia-lespins.fr",
+  "telephone_etablissement": null,
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Hôtel",
+  "siret": "824940571 00022",
+  "geocodage": {
+   "lon": 3.675052,
+   "lat": 43.438302
+  }
+ },
+ {
+  "nom_etablissement": "BIT Bédarieux - Office de Tourisme Communautaire Grand Orb",
+  "adresse": "1 rue de la République",
+  "site_web_etablissement": "https://www.bedarieux.fr/tourisme/",
+  "telephone_etablissement": "+33 4 67 95 08 79",
+  "commune": "BEDARIEUX",
+  "cp": "34600",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "823545207 00016",
+  "geocodage": {
+   "lon": 3.157437,
+   "lat": 43.61645
+  }
+ },
+ {
+  "nom_etablissement": "Gîtes Les Galets du Salagou",
+  "adresse": "Chemin du Galant",
+  "site_web_etablissement": "https://www.lesgaletsdusalagou.fr",
+  "telephone_etablissement": null,
+  "commune": "LIAUSSON",
+  "cp": "34800",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "528839087 00012",
+  "geocodage": {
+   "lon": 3.368608,
+   "lat": 43.636713
+  }
+ },
+ {
+  "nom_etablissement": "Meublé Ibiscus Villa Marrakech Lamalou",
+  "adresse": "8 Chemin Vigne Vieille",
+  "site_web_etablissement": "https://www.villa-marrakech-lamalou.fr",
+  "telephone_etablissement": "+33 7 81 18 92 29",
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "751994708 00020",
+  "geocodage": {
+   "lon": 3.090799,
+   "lat": 43.592836
+  }
+ },
+ {
+  "nom_etablissement": "Le Bistro d'Hervé",
+  "adresse": "47 rue Brescou",
+  "site_web_etablissement": "http://www.lebistrodherve.com",
+  "telephone_etablissement": "+33 4 67 62 30 69",
+  "commune": "AGDE",
+  "cp": "34300",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "434203337 00010",
+  "geocodage": {
+   "lon": 3.473613,
+   "lat": 43.310939
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme d'Octon",
+  "adresse": "Place Place Paul Vigné d'Octon Office de Tourisme du Clermontais",
+  "site_web_etablissement": "https://www.clermontais-tourisme.fr",
+  "telephone_etablissement": "+33 4 67 96 23 86",
+  "commune": "OCTON",
+  "cp": "34800",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "243400355 00034",
+  "geocodage": {
+   "lon": 3.303033,
+   "lat": 43.654503
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme de Sète",
+  "adresse": "60 Grand Rue Mario Roustan",
+  "site_web_etablissement": "http://www.tourisme-sete.com",
+  "telephone_etablissement": "+33 4 99 04 71 71",
+  "commune": "SETE",
+  "cp": "34200",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "444884654 00013",
+  "geocodage": {
+   "lon": 3.696281,
+   "lat": 43.40015
+  }
+ },
+ {
+  "nom_etablissement": "Musée Préhistorique Saint Ponais",
+  "adresse": "8 Grand Rue",
+  "site_web_etablissement": "https://www.pays-saintponais.com",
+  "telephone_etablissement": null,
+  "commune": "SAINT-PONS-DE-THOMIERES",
+  "cp": "34220",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "mental",
+   "moteur"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "243400553 00018",
+  "geocodage": {
+   "lon": 2.758723,
+   "lat": 43.488761
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme  de Mourèze",
+  "adresse": "908 - entrée du village Office de Tourisme du Clermontais",
+  "site_web_etablissement": "https://www.clermontais-tourisme.fr",
+  "telephone_etablissement": "+33 4 67 96 23 86",
+  "commune": "MOUREZE",
+  "cp": "34800",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "243400355 00034",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Musée International des Arts Modestes MIAM",
+  "adresse": "23 quai Maréchal de Lattre de Tassigny",
+  "site_web_etablissement": "https://www.miam.org",
+  "telephone_etablissement": null,
+  "commune": "SETE",
+  "cp": "34200",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "423147180 00032",
+  "geocodage": {
+   "lon": 3.696224,
+   "lat": 43.406067
+  }
+ },
+ {
+  "nom_etablissement": "Gîtes de la Pinède Cigale et Kiwi",
+  "adresse": "2 avenue de la Pinède",
+  "site_web_etablissement": "https://www.lesgitesdelapinede.com",
+  "telephone_etablissement": null,
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "788615623 00014",
+  "geocodage": {
+   "lon": 3.685174,
+   "lat": 43.445669
+  }
+ },
+ {
+  "nom_etablissement": "Restaurant Le Nautic",
+  "adresse": "3 rue de l' Estacade",
+  "site_web_etablissement": "https://www.restaurant-lenautic.com",
+  "telephone_etablissement": null,
+  "commune": "AGDE",
+  "cp": "34300",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.50972,
+   "lat": 43.274389
+  }
+ },
+ {
+  "nom_etablissement": "Médiathèque Emile Zola",
+  "adresse": "2018 Boulevard de l'Aéroport International",
+  "site_web_etablissement": "https://www.montpellier-agglo.com",
+  "telephone_etablissement": "+33 4 67 34 87 00",
+  "commune": "MONTPELLIER",
+  "cp": "34000",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Loisir",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Etablissement de loisir",
+  "siret": "243400017 00022",
+  "geocodage": {
+   "lon": 3.892183,
+   "lat": 43.608958
+  }
+ },
+ {
+  "nom_etablissement": "Musée de la Mer.",
+  "adresse": "Rue Jean Vilar",
+  "site_web_etablissement": "http://www.tourisme-sete.com/musee-de-la-mer-sete.html",
+  "telephone_etablissement": "+33 4 99 04 71 55",
+  "commune": "SETE",
+  "cp": "34200",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "213403017 00014",
+  "geocodage": {
+   "lon": 3.685039,
+   "lat": 43.394032
+  }
+ },
+ {
+  "nom_etablissement": "Restaurant Le Patio",
+  "adresse": "Rue Endevel",
+  "site_web_etablissement": "https://www.restaurant-patio.fr",
+  "telephone_etablissement": "+33 4 67 49 09 45",
+  "commune": "BEZIERS",
+  "cp": "34500",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "431765338 00014",
+  "geocodage": {
+   "lon": 3.217302,
+   "lat": 43.365912
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme de Marseillan",
+  "adresse": "Avenue de la Méditérranée",
+  "site_web_etablissement": "https://www.marseillan.com",
+  "telephone_etablissement": "+33 4 67 21 82 43",
+  "commune": "MARSEILLAN",
+  "cp": "34340",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "213401508 00014",
+  "geocodage": {
+   "lon": 3.549296,
+   "lat": 43.316529
+  }
+ },
+ {
+  "nom_etablissement": "HOTEL DES THERMES",
+  "adresse": "6 rue Privat",
+  "site_web_etablissement": "https://www.hoteldesthermes-lamalou.fr",
+  "telephone_etablissement": "+33 4 67 95 63 11",
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement;Restauration",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Hôtel;Restaurant",
+  "siret": "482890233 00018",
+  "geocodage": {
+   "lon": 3.080862,
+   "lat": 43.594304
+  }
+ },
+ {
+  "nom_etablissement": "Camping Municipal Pech d'AY",
+  "adresse": "Avenue de la Gare",
+  "site_web_etablissement": "http://www.balaruc-les-bains.com/camping-municipal-pech-d-ay.html",
+  "telephone_etablissement": "+33 4 67 48 50 34",
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Camping",
+  "siret": "519500599 00021",
+  "geocodage": {
+   "lon": 3.688597,
+   "lat": 43.445769
+  }
+ },
+ {
+  "nom_etablissement": "Restaurant La croisée - Le patio",
+  "adresse": "1 avenue de l'europe Centre commercial la Croisée",
+  "site_web_etablissement": "https://www.restaurantpatiolacroisee.fr",
+  "telephone_etablissement": null,
+  "commune": "CLAPIERS",
+  "cp": "34830",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "445006448 00028",
+  "geocodage": {
+   "lon": 3.899694,
+   "lat": 43.660276
+  }
+ },
+ {
+  "nom_etablissement": "RESTAURANT L'AROME",
+  "adresse": "22 avenue du Port",
+  "site_web_etablissement": "http://restaurant-larome.eu/",
+  "telephone_etablissement": "+33 4 67 48 48 27",
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Restaurant",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.681595,
+   "lat": 43.440573
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme Annexe de Villeneuve les Béziers",
+  "adresse": "Quai du Canal du Midi Boulevard Pasteur",
+  "site_web_etablissement": "https://www.beziers-in-mediterranee.com",
+  "telephone_etablissement": null,
+  "commune": "VILLENEUVE-LES-BEZIERS",
+  "cp": "34420",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "330565045 00011",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Office de Tourisme du Clermontais",
+  "adresse": "Place Jean Jaurès",
+  "site_web_etablissement": "https://www.clermontais-tourisme.fr",
+  "telephone_etablissement": "+33 4 67 96 23 86",
+  "commune": "CLERMONT-L'HERAULT",
+  "cp": "34800",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "243400355 00034",
+  "geocodage": {
+   "lon": 3.436563,
+   "lat": 43.626496
+  }
+ },
+ {
+  "nom_etablissement": "L'Hôtel Particulier Béziers",
+  "adresse": "65 avenue du 22 Août 1944",
+  "site_web_etablissement": "https://www.hotelparticulierbeziers.com",
+  "telephone_etablissement": null,
+  "commune": "BEZIERS",
+  "cp": "34500",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Hôtel",
+  "siret": "750319642 00013",
+  "geocodage": {
+   "lon": 3.221968,
+   "lat": 43.343759
+  }
+ },
+ {
+  "nom_etablissement": "Gîte d'étape et de séjour Château de Villarel",
+  "adresse": "CHATEAU de VILLAREL",
+  "site_web_etablissement": "http://www.chateau-villarel.com/chateauvillarel/Accueil.html",
+  "telephone_etablissement": "+33 4 67 82 59 70",
+  "commune": "BRISSAC",
+  "cp": "34190",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "523593820 00013",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Restaurant Le Pressoir",
+  "adresse": "17 place de la Fontaine",
+  "site_web_etablissement": "https://www.restaurant-lepressoir.fr",
+  "telephone_etablissement": "+33 4 67 96 70 59",
+  "commune": "SAINT-SATURNIN-DE-LUCIAN",
+  "cp": "34725",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "511964777 00029",
+  "geocodage": {
+   "lon": 3.471299,
+   "lat": 43.694772
+  }
+ },
+ {
+  "nom_etablissement": "Hôtel Aragon",
+  "adresse": "10 rue Baudoin",
+  "site_web_etablissement": "https://www.hotel-aragon.fr",
+  "telephone_etablissement": "+33 4 67 10 70 00",
+  "commune": "MONTPELLIER",
+  "cp": "34000",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Hôtel",
+  "siret": "451321996 00022",
+  "geocodage": {
+   "lon": 3.870292,
+   "lat": 43.604617
+  }
+ },
+ {
+  "nom_etablissement": "CAMPING LE CHEMIN DES BAINS",
+  "adresse": "Avenue de Montpellier",
+  "site_web_etablissement": "http://www.balaruc-les-bains.com/camping-municipal-chemin-des-bains.html",
+  "telephone_etablissement": "+33 4 67 48 51 48",
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Camping",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.680158,
+   "lat": 43.443535
+  }
+ },
+ {
+  "nom_etablissement": "Restaurant My Ami Clermont",
+  "adresse": "1 place de la République",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": null,
+  "commune": "CLERMONT-L'HERAULT",
+  "cp": "34800",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Restaurant",
+  "siret": "437927445 00035",
+  "geocodage": {
+   "lon": 3.430913,
+   "lat": 43.627657
+  }
+ },
+ {
+  "nom_etablissement": "Le Bistro du Pic",
+  "adresse": "61 place de l'Hermet",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": null,
+  "commune": "CLARET",
+  "cp": "34270",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "810699975 00019",
+  "geocodage": {
+   "lon": 3.906222,
+   "lat": 43.861586
+  }
+ },
+ {
+  "nom_etablissement": "Tour Médiévale",
+  "adresse": "101 rue de la mairie",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": "+33 4 67 98 69 69",
+  "commune": "VALROS",
+  "cp": "34290",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "213403256 00018",
+  "geocodage": {
+   "lon": 3.366467,
+   "lat": 43.421241
+  }
+ },
+ {
+  "nom_etablissement": "Gîte rural La Chemin'hôte - M. et Mme Roncen",
+  "adresse": "11 avenue de la Gare",
+  "site_web_etablissement": "https://www.lacheminhote.com",
+  "telephone_etablissement": "+33 4 67 97 39 08",
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "502417694 00010",
+  "geocodage": {
+   "lon": 3.080863,
+   "lat": 43.588
+  }
+ },
+ {
+  "nom_etablissement": "LE MANAKA",
+  "adresse": "17 route de Saint Gervais lieu-dit Lamalou le Haut",
+  "site_web_etablissement": "http://www.lemanaka.fr",
+  "telephone_etablissement": "+33 6 26 88 85 61",
+  "commune": "COMBES",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.077052,
+   "lat": 43.608121
+  }
+ },
+ {
+  "nom_etablissement": "Centre de Vacances Mer et Soleil - Les Orpellières",
+  "adresse": "Les Orpellières Valras Plage Rive Gauche",
+  "site_web_etablissement": "https://pep34vacances.com",
+  "telephone_etablissement": "+33 4 67 32 17 33",
+  "commune": "SERIGNAN",
+  "cp": "34410",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Village de vacances",
+  "siret": "340343425 00039",
+  "geocodage": {
+   "lon": 3.292761,
+   "lat": 43.282344
+  }
+ },
+ {
+  "nom_etablissement": "Meublé Médina Villa Marrakech Lamalou",
+  "adresse": "7 Chemin Vigne Vieille",
+  "site_web_etablissement": "https://www.villa-marrakech-lamalou.fr",
+  "telephone_etablissement": "+33 7 81 18 92 29",
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "751994708 00020",
+  "geocodage": {
+   "lon": 3.091937,
+   "lat": 43.591992
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme Intercommunal Saint Guilhem Le Désert - Vallée de l'Hérault - siège social",
+  "adresse": "-",
+  "site_web_etablissement": "https://www.saintguilhem-valleeherault.fr",
+  "telephone_etablissement": "+33 4 67 57 58 83",
+  "commune": "GIGNAC",
+  "cp": "34150",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "494316581 00029",
+  "geocodage": {
+   "lon": 3.564847,
+   "lat": 43.648197
+  }
+ },
+ {
+  "nom_etablissement": "OFFICE DE TOURISME",
+  "adresse": "LE PHARE DE LA MEDITERRANEE PLACE DE LA MEDITERRANEE",
+  "site_web_etablissement": "https://www.ot-palavaslesflots.com/fr",
+  "telephone_etablissement": "+33 4 67 07 73 34",
+  "commune": "PALAVAS-LES-FLOTS",
+  "cp": "34250",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "788214997 00017",
+  "geocodage": {
+   "lon": 3.932093,
+   "lat": 43.52841
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme",
+  "adresse": "Pavillon Sévigné",
+  "site_web_etablissement": "http://www.balaruc-les-bains.com",
+  "telephone_etablissement": "+33 6 70 55 75 64",
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "519500599 00013",
+  "geocodage": {
+   "lon": 3.697619,
+   "lat": 43.446726
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme de Béziers",
+  "adresse": "Place du Forum",
+  "site_web_etablissement": "https://www.beziers-in-mediterranee.com",
+  "telephone_etablissement": null,
+  "commune": "BEZIERS",
+  "cp": "34500",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "330565045 00011",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Office de Tourisme de Béziers Mediterranée",
+  "adresse": "Place du Forum",
+  "site_web_etablissement": "https://www.beziers-in-mediterranee.com",
+  "telephone_etablissement": null,
+  "commune": "BEZIERS",
+  "cp": "34500",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "330565045 00011",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Gite Les Coudaissas",
+  "adresse": "-",
+  "site_web_etablissement": "https://www.coudaissas.com",
+  "telephone_etablissement": null,
+  "commune": "LE POUGET",
+  "cp": "34230",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "484251384 00018",
+  "geocodage": {
+   "lon": 3.517514,
+   "lat": 43.591862
+  }
+ },
+ {
+  "nom_etablissement": "BATEAU PASSAGERS - S.A.S. LE COLOMBIERS",
+  "adresse": "7 rue Malpas",
+  "site_web_etablissement": "https://www.bateau-le-colombiers.com",
+  "telephone_etablissement": "+33 4 67 26 06 62",
+  "commune": "COLOMBIERS",
+  "cp": "34440",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Visite guidée",
+  "siret": "818946212 00011",
+  "geocodage": {
+   "lon": 3.136959,
+   "lat": 43.311977
+  }
+ },
+ {
+  "nom_etablissement": "MUSEE REGIONAL D'ART CONTEMPORAIN OCCITANIE/PYRENEES MEDITERRANE",
+  "adresse": "146 avenue de la Plage",
+  "site_web_etablissement": "http://mrac.laregion.fr/",
+  "telephone_etablissement": "+33 4 67 32 33 05",
+  "commune": "SERIGNAN",
+  "cp": "34410",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Loisir;Visite",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Etablissement de loisir;Lieu de visite",
+  "siret": "200053791 00014",
+  "geocodage": {
+   "lon": 3.280011,
+   "lat": 43.28101
+  }
+ },
+ {
+  "nom_etablissement": "OFFICE MUNICIPAL DE TOURISME DE MAUGUIO CARNON",
+  "adresse": "Centre Administratif - Rue du Levant Carnon-plage",
+  "site_web_etablissement": "https://www.mauguiocarnontourisme.com",
+  "telephone_etablissement": "+33 4 67 50 51 15",
+  "commune": "MAUGUIO",
+  "cp": "34130",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "330685363 00039",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Meublé Palmeraie Villa Marrakech Lamalou",
+  "adresse": "7 Chemin Vigne Vieille",
+  "site_web_etablissement": "https://www.villa-marrakech-lamalou.fr",
+  "telephone_etablissement": "+33 7 81 18 92 29",
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "751994708 00020",
+  "geocodage": {
+   "lon": 3.091937,
+   "lat": 43.591992
+  }
+ },
+ {
+  "nom_etablissement": "Meublé - Villa Marthe les cerisiers",
+  "adresse": "15 rue de l'Egue",
+  "site_web_etablissement": null,
+  "telephone_etablissement": "+33 6 26 34 11 67",
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.082441,
+   "lat": 43.602043
+  }
+ },
+ {
+  "nom_etablissement": "Vallée de l'Hérault - Antenne du Grand Site",
+  "adresse": null,
+  "site_web_etablissement": "https://www.saintguilhem-valleeherault.fr",
+  "telephone_etablissement": "+33 4 67 57 58 83",
+  "commune": "ANIANE",
+  "cp": "34150",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "494316581 00029",
+  "geocodage": {
+   "lon": 3.584069,
+   "lat": 43.681276
+  }
+ },
+ {
+  "nom_etablissement": "CAMPING DOMAINE LE VERNIS",
+  "adresse": "Domaine le Vernis",
+  "site_web_etablissement": "http://campingdomainelevernis.fr/campingdomainelevernis/",
+  "telephone_etablissement": "+33 4 68 91 13 22",
+  "commune": "AZILLANET",
+  "cp": "34210",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Camping",
+  "siret": "792860454 00018",
+  "geocodage": {
+   "lon": 2.773793,
+   "lat": 43.326887
+  }
+ },
+ {
+  "nom_etablissement": "Caveau de Beauvignac -  Restaurant saisonnier",
+  "adresse": "Route de Pézenas",
+  "site_web_etablissement": "https://www.cave-pomerols.com",
+  "telephone_etablissement": null,
+  "commune": "MEZE",
+  "cp": "34140",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Restauration",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Restaurant",
+  "siret": "524239084 00014",
+  "geocodage": {
+   "lon": 3.594143,
+   "lat": 43.432711
+  }
+ },
+ {
+  "nom_etablissement": "Gite de Majubiers",
+  "adresse": "232 avenue de la Tuilerie",
+  "site_web_etablissement": "https://www.gites-de-France.fr",
+  "telephone_etablissement": "+33 6 28 34 59 68",
+  "commune": "ESPONDEILHAN",
+  "cp": "34290",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "380941500 00023",
+  "geocodage": {
+   "lon": 3.264607,
+   "lat": 43.441364
+  }
+ },
+ {
+  "nom_etablissement": "Mme et Mr BASSO HAUGUEL Catherine",
+  "adresse": "18 allée des chênes verts",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": "+33 4 30 40 23 04",
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.089818,
+   "lat": 43.590564
+  }
+ },
+ {
+  "nom_etablissement": "Office Tourisme Intercommunal Vallée de L'Hérault",
+  "adresse": "2 place de la Liberté",
+  "site_web_etablissement": "http://www.saintguilhem-valleeherault.fr",
+  "telephone_etablissement": "+33 4 67 57 58 83",
+  "commune": "SAINT-GUILHEM-LE-DESERT",
+  "cp": "34150",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "494316581 00029",
+  "geocodage": {
+   "lon": 3.549051,
+   "lat": 43.734099
+  }
+ },
+ {
+  "nom_etablissement": "Musée l'Ephébe Musée Archéologique Subaquatique",
+  "adresse": "Mas de la Clap",
+  "site_web_etablissement": "https://www.museecapd'agde.com",
+  "telephone_etablissement": null,
+  "commune": "AGDE",
+  "cp": "34300",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "mental",
+   "moteur"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "213400039 00011",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Meuble de Mme Gallot Privat",
+  "adresse": "Rue Ranquet",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": null,
+  "commune": "VALFLAUNES",
+  "cp": "34270",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.866921,
+   "lat": 43.79761
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme de la Grande Motte",
+  "adresse": "55 rue du Port",
+  "site_web_etablissement": "https://www.lagrandemotte.com",
+  "telephone_etablissement": null,
+  "commune": "LA GRANDE-MOTTE",
+  "cp": "34280",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "419560321 00012",
+  "geocodage": {
+   "lon": 4.084905,
+   "lat": 43.559398
+  }
+ },
+ {
+  "nom_etablissement": "Office de Tourisme Annexe Beziers Mediterranée Villeneuve les Béziers",
+  "adresse": "Quai du Canal du Midi Boulevard Pasteur",
+  "site_web_etablissement": "https://www.beziers-in-mediterranee.com",
+  "telephone_etablissement": null,
+  "commune": "VILLENEUVE-LES-BEZIERS",
+  "cp": "34420",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "330565045 00011",
+  "geocodage": null
+ },
+ {
+  "nom_etablissement": "Office de Tourisme Annexe de Valras",
+  "adresse": "2 square rené Cassin",
+  "site_web_etablissement": "https://www.beziers-in-mediterranee.com",
+  "telephone_etablissement": null,
+  "commune": "VALRAS-PLAGE",
+  "cp": "34350",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "330565045 00011",
+  "geocodage": {
+   "lon": 3.270781,
+   "lat": 43.235093
+  }
+ },
+ {
+  "nom_etablissement": "Plage de la Roquille",
+  "adresse": null,
+  "site_web_etablissement": "https://www/capdagde.com",
+  "telephone_etablissement": null,
+  "commune": "AGDE",
+  "cp": "34300",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Loisir",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Sortie nature",
+  "siret": "213400039 00011",
+  "geocodage": {
+   "lon": 3.484797,
+   "lat": 43.302779
+  }
+ },
+ {
+  "nom_etablissement": "F2 Balaruc les Bains",
+  "adresse": "22 avenue Pasteur Résidence Le Parc",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": "+33 6 09 08 97 38",
+  "commune": "BALARUC-LES-BAINS",
+  "cp": "34540",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": null,
+  "geocodage": {
+   "lon": 3.67552,
+   "lat": 43.437895
+  }
+ },
+ {
+  "nom_etablissement": "Musée Médard",
+  "adresse": "71 place des Martyrs de la Résistance",
+  "site_web_etablissement": "https://www.museemedard.fr",
+  "telephone_etablissement": null,
+  "commune": "LUNEL",
+  "cp": "34400",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "213401458 00012",
+  "geocodage": {
+   "lon": 4.134209,
+   "lat": 43.67542
+  }
+ },
+ {
+  "nom_etablissement": "BIT Avène - Office de Tourisme Communautaire Grand Orb",
+  "adresse": "10 Quai des Tanneries",
+  "site_web_etablissement": "https://www.grandorb.fr/Tourisme/La-grande-evasion/5/11.html",
+  "telephone_etablissement": "+33 4 67 23 43 38",
+  "commune": "AVENE",
+  "cp": "34260",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "823545207 00016",
+  "geocodage": {
+   "lon": 3.100701,
+   "lat": 43.757262
+  }
+ },
+ {
+  "nom_etablissement": "Musée de la Cloche et de la Sonnaille",
+  "adresse": "Espace André Malraux Avenue de la Gare",
+  "site_web_etablissement": "https://www.ot-lamaloulesbains.fr",
+  "telephone_etablissement": null,
+  "commune": "HEREPIAN",
+  "cp": "34600",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Visite",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "visuel"
+  ],
+  "activite": "Lieu de visite",
+  "siret": "213401193 00015",
+  "geocodage": {
+   "lon": 3.112486,
+   "lat": 43.594032
+  }
+ },
+ {
+  "nom_etablissement": "Meublé de M. Rossignol",
+  "adresse": "Les Hauts de Sabourel Rue de Cougouelatte",
+  "site_web_etablissement": "https://www.location-studio-lamalou.fr",
+  "telephone_etablissement": null,
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "518045323 00038",
+  "geocodage": {
+   "lon": 3.074555,
+   "lat": 43.604794
+  }
+ },
+ {
+  "nom_etablissement": "OFFICE DE TOURISME DE FRONTIGNAN PLAGE",
+  "adresse": "Avenue des Etangs",
+  "site_web_etablissement": "https://www.frontignan-tourisme.com/",
+  "telephone_etablissement": "+33 4 67 18 31 60",
+  "commune": "FRONTIGNAN",
+  "cp": "34110",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "200001097 00019",
+  "geocodage": {
+   "lon": 3.756424,
+   "lat": 43.451937
+  }
+ },
+ {
+  "nom_etablissement": "BIT Lamalou les Bains - Office de Tourisme Communautaire Grand Orb",
+  "adresse": "1 avenue Capus",
+  "site_web_etablissement": "http://www.ot-lamaloulesbains.fr/fr",
+  "telephone_etablissement": "+33 4 67 95 70 91",
+  "commune": "LAMALOU-LES-BAINS",
+  "cp": "34240",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "823545207 00016",
+  "geocodage": {
+   "lon": 3.082022,
+   "lat": 43.595468
+  }
+ },
+ {
+  "nom_etablissement": "Gîte le Moulin de Palat",
+  "adresse": "2 Z.A.Le Pont Mas de Palat",
+  "site_web_etablissement": "https://",
+  "telephone_etablissement": null,
+  "commune": "GIGNAC",
+  "cp": "34150",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Hébergement",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "visuel"
+  ],
+  "activite": "Meublé de tourisme",
+  "siret": "384531968 00020",
+  "geocodage": {
+   "lon": 3.571885,
+   "lat": 43.637301
+  }
+ },
+ {
+  "nom_etablissement": "Maison du Malpas",
+  "adresse": "Maison du Malpas. CoCo LA Domitienne Route de l'Oppidum",
+  "site_web_etablissement": "https://www.www.ladomitienne.com",
+  "telephone_etablissement": null,
+  "commune": "COLOMBIERS",
+  "cp": "34440",
+  "region": "Occitanie",
+  "departement": "Hérault",
+  "categorie_filiere": "Information touristique",
+  "handicaps": [
+   "auditif",
+   "mental",
+   "moteur",
+   "visuel"
+  ],
+  "activite": "Office de tourisme",
+  "siret": "243400488 00025",
+  "geocodage": null
+ }
+]

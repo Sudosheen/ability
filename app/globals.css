@@ -1,0 +1,185 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Thème clair uniquement pour la maquette : les variantes dark: ne s'appliquent jamais. */
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------------
+   Tokens Ability
+   Règle : le jaune est un fond, jamais une couleur de texte sur fond clair.
+   --------------------------------------------------------------------------- */
+@theme {
+  --color-butter-50: #fffdf5;
+  --color-butter-100: #fff6d6;
+  --color-butter-200: #ffeeb0;
+  --color-butter-300: #ffe58a;
+  --color-sun-400: #ffcb3d;
+  --color-sun-500: #f2b705;
+  --color-sun-600: #b88a00;
+
+  --color-ink-900: #1d1b16;
+  --color-ink-700: #3b3830;
+  --color-ink-600: #5c574a;
+  --color-ink-400: #8c8573;
+  --color-ink-200: #e3dcc6;
+  --color-ink-100: #f3efe2;
+
+  /* Niveaux de preuve et statuts : toujours accompagnés d'une icône et d'un texte. */
+  --color-ok-700: #1b5e20;
+  --color-ok-600: #2e7d32;
+  --color-ok-100: #e3f4e1;
+  --color-label-700: #0b4a8f;
+  --color-label-600: #1565c0;
+  --color-label-100: #e1eefb;
+  --color-commu-700: #5b2a86;
+  --color-commu-100: #f0e6fa;
+  --color-warn-700: #8a3b00;
+  --color-warn-600: #c25e00;
+  --color-warn-100: #ffe2c2;
+  --color-ko-700: #8f1d16;
+  --color-ko-600: #b3261e;
+  --color-ko-100: #fbe4e1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: var(--color-butter-50);
+  --foreground: var(--color-ink-900);
+  --card: #ffffff;
+  --card-foreground: var(--color-ink-900);
+  --popover: #ffffff;
+  --popover-foreground: var(--color-ink-900);
+  --primary: var(--color-sun-400);
+  --primary-foreground: var(--color-ink-900);
+  --secondary: var(--color-butter-100);
+  --secondary-foreground: var(--color-ink-900);
+  --muted: var(--color-ink-100);
+  --muted-foreground: var(--color-ink-600);
+  --accent: var(--color-butter-300);
+  --accent-foreground: var(--color-ink-900);
+  --destructive: var(--color-ko-600);
+  --border: var(--color-ink-200);
+  /* Contour des champs : 3:1 au moins sur fond clair (WCAG 1.4.11). */
+  --input: var(--color-ink-400);
+  --ring: var(--color-ink-900);
+  --radius: 0.875rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    /* 18 px de base, en pourcentage pour respecter le réglage du navigateur. */
+    font-size: 112.5%;
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-extrabold tracking-tight text-balance;
+  }
+  /* Focus toujours visible : anneau encre de 3 px, décalé. */
+  :focus-visible {
+    outline: 3px solid var(--color-ink-900);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Lien d'évitement */
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  z-index: 100;
+  background: var(--color-ink-900);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+.skip-link:focus {
+  top: 0.5rem;
+  outline-color: var(--color-sun-400);
+}
+
+/* Carte : contrôles MapLibre aux couleurs Ability */
+.maplibregl-ctrl-group {
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgb(29 27 22 / 0.25) !important;
+}
+.maplibregl-ctrl-group button {
+  width: 44px !important;
+  height: 44px !important;
+}
+.maplibregl-ctrl-attrib {
+  font-family: inherit;
+  font-size: 0.72rem;
+}
+/* Liens d'attribution : distingués du texte autrement que par la couleur. */
+.maplibregl-ctrl-attrib a {
+  color: var(--color-ink-900) !important;
+  text-decoration: underline !important;
+}
+
+/* Impression du dossier de séjour : fond blanc, texte noir, pas d'ombre. */
+@media print {
+  @page {
+    margin: 1.5cm;
+  }
+  html {
+    font-size: 100%;
+  }
+  body {
+    background: #fff;
+  }
+  .skip-link {
+    display: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}

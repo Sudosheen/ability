@@ -1,0 +1,40 @@
+{
+  "fusionner": [
+    {
+      "a": "acceslibre:c70137a9-15a4-4398-8ed2-b4d7b3c6e237",
+      "b": "th:th-21502fb0",
+      "note": "Gîte Mas Lou Biaïs = MAS LOUBIAIS, 29 chemin de Montfaucon, Puisserguier"
+    },
+    {
+      "a": "osm:way/178387339",
+      "b": "th:th-340bdb30",
+      "note": "Musée de Préhistoire Régionale = Musée Préhistorique Saint Ponais, 8 Grand Rue"
+    },
+    {
+      "a": "acceslibre:c0609977-c20f-4420-8032-c1461102e333",
+      "b": "th:th-50b89176",
+      "note": "Musée de l'Éphèbe, Agde (la fiche T&H n'a pas de coordonnées)"
+    },
+    {
+      "a": "osm:node/1623559455",
+      "b": "th:th-7333f6f2",
+      "note": "Musée régional d'art contemporain, 146 avenue de la Plage, Sérignan"
+    },
+    {
+      "a": "osm:way/208728784",
+      "b": "th:th-8cb38a13",
+      "note": "Hôtel Ibis Sète = Hôtel Ibis Balaruc Sète, 3 avenue de la Pinède"
+    },
+    {
+      "a": "osm:way/122825616",
+      "b": "th:th-920f1b13",
+      "note": "La Chemin'Hôte, Lamalou-les-Bains"
+    },
+    {
+      "a": "acceslibre:74e612b9-98f5-44fa-8f86-bb0e03a88f27",
+      "b": "th:th-e79671bb",
+      "note": "Office de tourisme de Sète, 60 Grand Rue Mario Roustan"
+    }
+  ],
+  "separer": []
+}

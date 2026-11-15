@@ -1,0 +1,179 @@
+{
+  "genereLe": "2026-11-15T12:00:43.412Z",
+  "sources": [
+    {
+      "id": "acceslibre",
+      "titre": "Acceslibre : accessibilité des établissements recevant du public",
+      "recupereLe": "2026-11-14T18:49:26.412Z",
+      "fichesBrutes": 10925,
+      "fichesGardees": 10925,
+      "note": "L'export ne fournit pas de date de mise à jour par établissement."
+    },
+    {
+      "id": "osm",
+      "titre": "OpenStreetMap (données affichées par Wheelmap), via Overpass",
+      "recupereLe": "2026-11-14T18:35:19.152Z",
+      "fichesBrutes": 20358,
+      "fichesGardees": 15059,
+      "note": "Base OSM du 2026-11-14T18:33:59Z"
+    },
+    {
+      "id": "th",
+      "titre": "Liste des établissements labellisés Tourisme & Handicap",
+      "recupereLe": "2026-11-14T18:36:05.149Z",
+      "fichesBrutes": 83,
+      "fichesGardees": 82,
+      "note": "Jeu de données figé depuis le 2020-12-15 : les labels (valables 5 ans) sont à reconfirmer."
+    }
+  ],
+  "lieux": {
+    "total": 25070,
+    "parCouche": {
+      "places": 4030,
+      "services": 12033,
+      "equipements": 9007
+    },
+    "sansCoordonnees": 4,
+    "parCategorie": {
+      "stationnement": 8168,
+      "commerce": 5226,
+      "service": 4982,
+      "restauration": 1894,
+      "sante": 1523,
+      "hebergement": 1293,
+      "toilettes": 839,
+      "activite": 576,
+      "autre": 302,
+      "info": 144,
+      "plage": 123
+    },
+    "parCombinaisonDeSources": {
+      "osm": 14088,
+      "acceslibre": 9952,
+      "acceslibre + osm": 944,
+      "th": 41,
+      "acceslibre + osm + th": 19,
+      "acceslibre + th": 10,
+      "demo": 8,
+      "osm + th": 8
+    }
+  },
+  "rapprochement": {
+    "seuilFusion": 0.82,
+    "seuilRevue": 0.65,
+    "pairesCandidates": 1894,
+    "fusionsAutomatiques": 993,
+    "fusionsForcees": 7,
+    "aVerifier": 353,
+    "tauxParSource": {
+      "acceslibre": {
+        "fiches": 10925,
+        "rapprochees": 973,
+        "pourcentage": 8.9
+      },
+      "osm": {
+        "fiches": 15059,
+        "rapprochees": 971,
+        "pourcentage": 6.4
+      },
+      "th": {
+        "fiches": 78,
+        "rapprochees": 37,
+        "pourcentage": 47.4
+      }
+    }
+  },
+  "accessibilite": {
+    "parStatut": {
+      "oui": 11086,
+      "inconnu": 2632,
+      "non": 1690,
+      "partiel": 553,
+      "divergent": 102
+    },
+    "parStatutHebergements": {
+      "inconnu": 735,
+      "oui": 434,
+      "non": 98,
+      "partiel": 24,
+      "divergent": 2
+    },
+    "aReconfirmer": 8346
+  },
+  "divergences": {
+    "acces_fauteuil": 103,
+    "label_th_moteur": 1,
+    "wc_adaptes": 1
+  },
+  "couvertureCriteresBloquantsHebergements": {
+    "hebergements": 1293,
+    "criteres": {
+      "acces_fauteuil": {
+        "libelle": "Accès en fauteuil roulant",
+        "renseigne": 558,
+        "pourcentage": 43.2
+      },
+      "entree_plain_pied": {
+        "libelle": "Entrée de plain-pied",
+        "renseigne": 432,
+        "pourcentage": 33.4
+      },
+      "entree_largeur": {
+        "libelle": "Largeur de la porte d'entrée",
+        "renseigne": 283,
+        "pourcentage": 21.9
+      },
+      "accueil_plain_pied": {
+        "libelle": "Circulation intérieure de plain-pied",
+        "renseigne": 135,
+        "pourcentage": 10.4
+      },
+      "wc_adaptes": {
+        "libelle": "Toilettes adaptées",
+        "renseigne": 248,
+        "pourcentage": 19.2
+      },
+      "chambres_accessibles": {
+        "libelle": "Nombre de chambres accessibles",
+        "renseigne": 393,
+        "pourcentage": 30.4
+      },
+      "chambre_largeur_porte": {
+        "libelle": "Largeur de la porte de la chambre",
+        "renseigne": 8,
+        "pourcentage": 0.6
+      },
+      "lit_hauteur": {
+        "libelle": "Hauteur du lit",
+        "renseigne": 8,
+        "pourcentage": 0.6
+      },
+      "lit_espace_dessous": {
+        "libelle": "Espace libre sous le lit pour un lève-personne",
+        "renseigne": 8,
+        "pourcentage": 0.6
+      },
+      "chambre_aire_rotation": {
+        "libelle": "Aire de rotation de 150 cm dans la chambre",
+        "renseigne": 8,
+        "pourcentage": 0.6
+      },
+      "douche_plain_pied": {
+        "libelle": "Douche de plain-pied",
+        "renseigne": 199,
+        "pourcentage": 15.4
+      },
+      "wc_espace_transfert": {
+        "libelle": "Espace de transfert aux toilettes de la chambre",
+        "renseigne": 44,
+        "pourcentage": 3.4
+      }
+    }
+  },
+  "poids": {
+    "places.geojson": 917352,
+    "services.geojson": 2799614,
+    "equipements.geojson": 2052974,
+    "paquetsDeFiches": 256
+  }
+}

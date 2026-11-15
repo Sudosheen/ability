@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "id": "acceslibre",
+      "titre": "Acceslibre : accessibilité des établissements recevant du public",
+      "url": "https://www.data.gouv.fr/api/1/datasets/r/5b0f44f2-e6ea-4a58-874d-6fe364b40342",
+      "licence": "Licence Ouverte 2.0 (Etalab)",
+      "attribution": "Acceslibre, Ministère chargé des Transports / data.gouv.fr",
+      "fichier": "data/raw/acceslibre/acceslibre_34.csv",
+      "octets": 3564508,
+      "enregistrements": 10925,
+      "recupereLe": "2026-11-14T18:49:26.412Z",
+      "note": "L'export ne fournit pas de date de mise à jour par établissement."
+    },
+    {
+      "id": "osm",
+      "titre": "OpenStreetMap (données affichées par Wheelmap), via Overpass",
+      "url": "https://overpass-api.de/api/interpreter",
+      "licence": "ODbL 1.0",
+      "attribution": "© les contributeurs d'OpenStreetMap",
+      "fichier": "data/raw/osm/herault.json",
+      "octets": 5799332,
+      "enregistrements": 20358,
+      "recupereLe": "2026-11-14T18:35:19.152Z",
+      "note": "Base OSM du 2026-11-14T18:33:59Z"
+    },
+    {
+      "id": "th",
+      "titre": "Liste des établissements labellisés Tourisme & Handicap",
+      "url": "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/liste-des-etablissements-labellises-tourisme-et-handicap/exports/json?refine=departement%3AH%C3%A9rault",
+      "licence": "Licence Ouverte 2.0 (Etalab)",
+      "attribution": "Direction générale des Entreprises / data.economie.gouv.fr",
+      "fichier": "data/raw/tourisme-handicap/th_34.json",
+      "octets": 44607,
+      "enregistrements": 83,
+      "recupereLe": "2026-11-14T18:36:05.149Z",
+      "note": "Jeu de données figé depuis le 2020-12-15 : les labels (valables 5 ans) sont à reconfirmer."
+    }
+  ]
+}
