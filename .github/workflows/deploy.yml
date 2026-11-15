@@ -1,19 +1,24 @@
-# Publie la maquette sur GitHub Pages à chaque push sur main.
+# Vérifie chaque pull request vers main, et publie la maquette sur GitHub Pages
+# à chaque push sur main.
+#   - pull request : données, lint, types, tests et build, sans déploiement ;
+#   - push sur main : la même vérification, puis le déploiement.
 # Réglage à faire une fois : Settings > Pages > Source : « GitHub Actions ».
-name: Déployer sur GitHub Pages
+name: Vérifier et déployer
 
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  # Un déploiement à la fois sur main ; pour une pull request, seul le dernier
+  # push compte, sans jamais interrompre un déploiement.
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'pages' }}
   cancel-in-progress: true
 
 jobs:
@@ -38,14 +43,21 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
           NEXT_PUBLIC_TALLY_URL: ${{ vars.NEXT_PUBLIC_TALLY_URL }}
       # Empêche Jekyll d'ignorer le dossier _next.
-      - run: touch out/.nojekyll
-      - uses: actions/upload-pages-artifact@v3
+      - if: github.event_name != 'pull_request'
+        run: touch out/.nojekyll
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
   deploy:
+    # Jamais depuis une pull request : seul main est publié.
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

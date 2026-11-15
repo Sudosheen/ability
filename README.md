@@ -118,4 +118,4 @@ Le site vise le niveau AA des WCAG 2.2 : police Atkinson Hyperlegible Next, text
 
 ## Déploiement
 
-Le workflow `.github/workflows/deploy.yml` publie le site sur GitHub Pages à chaque push sur `main` : il lance `pnpm etl`, les tests, puis `pnpm build` avec `NEXT_PUBLIC_BASE_PATH=/<nom-du-dépôt>`. Dans les réglages du dépôt, choisir « GitHub Actions » comme source de Pages.
+Le workflow `.github/workflows/deploy.yml` vérifie chaque pull request vers `main` (`pnpm etl`, lint, types, tests, build), sans rien publier. À chaque push sur `main`, il refait la même vérification puis publie le site sur GitHub Pages, avec `NEXT_PUBLIC_BASE_PATH=/<nom-du-dépôt>`. Dans les réglages du dépôt, choisir « GitHub Actions » comme source de Pages.
