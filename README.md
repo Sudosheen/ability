@@ -38,6 +38,12 @@ Le bouton « Donner mon avis » apparaît sur chaque écran quand l'adresse d'un
 NEXT_PUBLIC_TALLY_URL=https://tally.so/r/xxxxxx pnpm build
 ```
 
+Sous PowerShell (Windows), la variable se pose avant la commande :
+
+```powershell
+$env:NEXT_PUBLIC_TALLY_URL = "https://tally.so/r/xxxxxx"; pnpm build
+```
+
 Ajoutez au formulaire un champ caché nommé `ecran` : il reçoit l'adresse de la page d'où vient le retour. Sur GitHub Pages, renseignez la variable `NEXT_PUBLIC_TALLY_URL` dans les variables du dépôt.
 
 ## Démarrer
