@@ -1,0 +1,11 @@
+# Fins de ligne Unix (LF) partout, sous Windows comme sous Linux et en CI.
+# Les données (CSV, JSON) et la licence ODbL sont copiées octet pour octet :
+# elles ne doivent jamais passer en CRLF.
+* text=auto eol=lf
+
+# Fichiers binaires : jamais convertis.
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.woff2 binary
