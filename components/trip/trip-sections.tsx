@@ -5,11 +5,13 @@ import Link from "next/link";
 import { Check, Sparkles } from "lucide-react";
 import { PlaceCard } from "@/components/ability/place-card";
 import { Button } from "@/components/ui/button";
-import { findCommune, type Commune } from "@/lib/data";
+import { acceptsChequesVacances, activityAllowance, activityCost } from "@/lib/budget";
+import { findCommune, getOffer, type Commune } from "@/lib/data";
 import { DEFAULT_OPTIONS, generateItinerary } from "@/lib/itinerary";
 import { compareEvaluations } from "@/lib/matching";
 import { haversineKm } from "@/lib/routing";
 import { JOURS_MAX, JOURS_MIN, daysBetween, setDayCount, type Trip } from "@/lib/trip";
+import { budgetOf, OfferLine, type FixedPeople } from "./budget-panel";
 import { DayPlanner } from "./day-planner";
 import { RouteMap } from "./route-map";
 import { featureToStop, toCandidate, type Evaluated } from "./use-candidates";
@@ -100,6 +102,7 @@ export function LodgingPicker({
   lieuSuffix?: string;
   rooms?: number;
 }) {
+  const cheques = trip.budget?.chequesVacances === true;
   const [showAll, setShowAll] = useState(false);
   const commune = trip.commune ? findCommune(communes, trip.commune) : null;
 
@@ -112,6 +115,7 @@ export function LodgingPicker({
     .filter((e) => e.feature.properties.c === "hebergement")
     .map((e) => ({ ...e, km: haversineKm(commune, { lat: e.feature.geometry.coordinates[1], lng: e.feature.geometry.coordinates[0] }) }))
     .filter((e) => e.km <= RAYON_HEBERGEMENT_KM)
+    .filter((e) => !cheques || acceptsChequesVacances(getOffer(e.feature.properties.id, "hebergement")))
     .sort((a, b) => compareEvaluations(a.evaluation, b.evaluation) || a.km - b.km);
   const hidden = around.filter((e) => e.evaluation.statut === "incompatible").length;
   const shown = (showAll ? around : around.filter((e) => e.evaluation.statut !== "incompatible")).slice(0, 12);
@@ -123,6 +127,7 @@ export function LodgingPicker({
         {around.length} hébergements à moins de {RAYON_HEBERGEMENT_KM} km de {commune.nom}
         {rooms > 1 ? `, pour ${rooms} chambres accessibles` : ""} : {compatibles} compatible{compatibles > 1 ? "s" : ""},{" "}
         {around.length - compatibles - hidden} à confirmer, {hidden} incompatible{hidden > 1 ? "s" : ""}.
+        {cheques ? " Seulement ceux qui acceptent les Chèques-Vacances." : ""}
       </p>
       {trip.hebergement && (
         <p className="flex items-center gap-2 rounded-2xl bg-ok-100 p-3 font-bold text-ok-700">
@@ -136,6 +141,7 @@ export function LodgingPicker({
           return (
             <li key={feature.properties.id} className="flex flex-col gap-2 rounded-2xl border border-ink-200 bg-white p-2">
               <PlaceCard place={feature.properties} evaluation={evaluation} className="border-0 p-1" />
+              <OfferLine id={feature.properties.id} c="hebergement" className="px-2" />
               <div className="flex flex-wrap gap-2 px-1 pb-1">
                 <Button
                   type="button"
@@ -170,12 +176,19 @@ export function ProgramEditor({
   communes,
   evaluated,
   lieuSuffix = "",
+  fixed,
+  rooms,
+  levePersonne = false,
 }: {
   trip: Trip;
   onChange: (t: Trip) => void;
   communes: Commune[];
   evaluated: Evaluated[] | null;
   lieuSuffix?: string;
+  /** Personnes du groupe, pour le budget d'une structure. */
+  fixed?: FixedPeople;
+  rooms?: number;
+  levePersonne?: boolean;
 }) {
   const [rythme, setRythme] = useState<1 | 2>(DEFAULT_OPTIONS.activitesParJour);
   const [rayon, setRayon] = useState(DEFAULT_OPTIONS.rayonActiviteKm);
@@ -185,11 +198,21 @@ export function ProgramEditor({
 
   const generate = () => {
     if (!center || !evaluated) return;
-    const plan = generateItinerary(center, evaluated.map(toCandidate), {
+    // Filtres de budget : Chèques-Vacances d'abord, puis enveloppe des activités.
+    const settings = budgetOf(trip, fixed);
+    const candidates = evaluated
+      .map(toCandidate)
+      .filter((c) => !settings.chequesVacances || acceptsChequesVacances(getOffer(c.id, c.c)));
+    const allowance = activityAllowance(trip, settings, { offerOf: getOffer, rooms, levePersonne });
+    const plan = generateItinerary(center, candidates, {
       ...DEFAULT_OPTIONS,
       jours: trip.programme.length,
       activitesParJour: rythme,
       rayonActiviteKm: rayon,
+      ...(allowance !== null && {
+        budgetActivites: allowance,
+        coutActivite: (c) => activityCost(getOffer(c.id, c.c), settings),
+      }),
     });
     const byId = new Map(evaluated.map((e) => [e.feature.properties.id, e.feature]));
     const programme = plan.map((day) =>
@@ -199,7 +222,8 @@ export function ProgramEditor({
     onChange({ ...trip, programme });
     setMessage(
       `Programme proposé sur ${programme.length} jour${programme.length > 1 ? "s" : ""}.` +
-        (manques ? ` ${manques} créneau${manques > 1 ? "x restent" : " reste"} libre${manques > 1 ? "s" : ""}, faute de lieu compatible ou à confirmer.` : "") +
+        (manques ? ` ${manques} créneau${manques > 1 ? "x restent" : " reste"} libre${manques > 1 ? "s" : ""}, faute de lieu compatible ou à confirmer${allowance !== null || settings.chequesVacances ? " dans vos critères de budget" : ""}.` : "") +
+        (allowance !== null ? ` Il restait environ ${Math.round(allowance).toLocaleString("fr-FR")} € pour les activités, une fois l'hébergement et les repas estimés.` : "") +
         " Vérifiez les lieux « à confirmer » avant de réserver.",
     );
   };
@@ -210,7 +234,8 @@ export function ProgramEditor({
         <h3 className="text-lg">Proposer un programme</h3>
         <p className="text-sm text-ink-700">
           Une activité le matin, un déjeuner tout près, une activité l&apos;après-midi. Jamais de lieu
-          incompatible ; les lieux compatibles d&apos;abord.
+          incompatible ; les lieux compatibles d&apos;abord. Le budget et le filtre Chèques-Vacances
+          s&apos;appliquent s&apos;ils sont réglés.
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
           <label className="flex flex-col gap-1">

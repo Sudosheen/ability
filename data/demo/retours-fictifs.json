@@ -1,0 +1,277 @@
+{
+  "avertissement": "Retours inventés pour la démonstration, uniquement sur les lieux fictifs. Les pseudonymes portent la mention « simulé ».",
+  "retours": [
+    {
+      "id": "demo-r1",
+      "lieuId": "0fc14456bf",
+      "lieuNom": "Hôtel Les Dunes (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Sète",
+      "date": "2026-10-04",
+      "auteur": "Camille (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "conforme",
+        "sanitaires": "conforme",
+        "restauration": "conforme",
+        "transport": "conforme"
+      },
+      "photo": true,
+      "commentaire": "Chambre conforme à la fiche, douche à l'italienne avec siège. Personnel attentif.",
+      "demo": true
+    },
+    {
+      "id": "demo-r2",
+      "lieuId": "0fc14456bf",
+      "lieuNom": "Hôtel Les Dunes (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Sète",
+      "date": "2026-09-21",
+      "auteur": "Foyer Les Oliviers (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "conforme",
+        "sanitaires": "conforme",
+        "restauration": "conforme",
+        "transport": "pas_vu"
+      },
+      "photo": true,
+      "commentaire": "Séjour de groupe à 4 fauteuils : le minibus se gare devant, rampe arrière dépliée sans souci.",
+      "demo": true
+    },
+    {
+      "id": "demo-r3",
+      "lieuId": "0fc14456bf",
+      "lieuNom": "Hôtel Les Dunes (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Sète",
+      "date": "2026-08-30",
+      "auteur": "Malik (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "pas_vu",
+        "sanitaires": "conforme",
+        "restauration": "pas_vu",
+        "transport": "conforme"
+      },
+      "photo": false,
+      "commentaire": "Venu en train jusqu'à Sète, assistance en gare puis taxi adapté réservé la veille.",
+      "demo": true
+    },
+    {
+      "id": "demo-r4",
+      "lieuId": "4702734903",
+      "lieuNom": "Résidence du Môle (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Sète",
+      "date": "2026-10-11",
+      "auteur": "Inès (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "non_conforme",
+        "sanitaires": "conforme",
+        "restauration": "pas_vu",
+        "transport": "pas_vu"
+      },
+      "photo": true,
+      "commentaire": "Lit trop haut pour un transfert seul (environ 60 cm), le reste est conforme.",
+      "demo": true
+    },
+    {
+      "id": "demo-r5",
+      "lieuId": "4702734903",
+      "lieuNom": "Résidence du Môle (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Sète",
+      "date": "2026-09-02",
+      "auteur": "Paul (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "conforme",
+        "sanitaires": "conforme",
+        "restauration": "pas_vu",
+        "transport": "pas_vu"
+      },
+      "photo": false,
+      "commentaire": "Studio rez-de-chaussée très bien, peut-être pas le même logement que d'autres voyageurs.",
+      "demo": true
+    },
+    {
+      "id": "demo-r6",
+      "lieuId": "49ac0b6063",
+      "lieuNom": "Gîte du Mas Blanc (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Agde",
+      "date": "2026-07-19",
+      "auteur": "Famille Roux (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "non_conforme",
+        "chambre": "conforme",
+        "sanitaires": "conforme",
+        "restauration": "pas_vu",
+        "transport": "pas_vu"
+      },
+      "photo": true,
+      "commentaire": "Gravier dans la cour, difficile en fauteuil manuel sans aide.",
+      "demo": true
+    },
+    {
+      "id": "demo-r7",
+      "lieuId": "49ac0b6063",
+      "lieuNom": "Gîte du Mas Blanc (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Agde",
+      "date": "2026-06-08",
+      "auteur": "Sonia (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "non_conforme",
+        "chambre": "conforme",
+        "sanitaires": "pas_vu",
+        "restauration": "pas_vu",
+        "transport": "pas_vu"
+      },
+      "photo": false,
+      "commentaire": "Le chemin d'accès en gravier bloque les petites roues avant.",
+      "demo": true
+    },
+    {
+      "id": "demo-r8",
+      "lieuId": "baa52ec5bf",
+      "lieuNom": "Hôtel du Cap (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Agde",
+      "date": "2026-10-25",
+      "auteur": "Malik (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "conforme",
+        "sanitaires": "conforme",
+        "restauration": "conforme",
+        "transport": "conforme"
+      },
+      "photo": false,
+      "commentaire": "Rien à signaler, tout correspond.",
+      "demo": true
+    },
+    {
+      "id": "demo-r9",
+      "lieuId": "ec6878faa6",
+      "lieuNom": "Village de vacances des Aresquiers (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Frontignan",
+      "date": "2026-08-14",
+      "auteur": "ESAT Les Garrigues (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "conforme",
+        "sanitaires": "conforme",
+        "restauration": "conforme",
+        "transport": "conforme"
+      },
+      "photo": true,
+      "commentaire": "Groupe de 6 : salle de restaurant avec tables à bonne hauteur, on a mangé tous ensemble.",
+      "demo": true
+    },
+    {
+      "id": "demo-r10",
+      "lieuId": "ec6878faa6",
+      "lieuNom": "Village de vacances des Aresquiers (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Frontignan",
+      "date": "2026-07-03",
+      "auteur": "Jeanne (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "conforme",
+        "sanitaires": "non_conforme",
+        "restauration": "conforme",
+        "transport": "pas_vu"
+      },
+      "photo": true,
+      "commentaire": "Barre d'appui des toilettes du mauvais côté pour moi (transfert par la gauche).",
+      "demo": true
+    },
+    {
+      "id": "demo-r11",
+      "lieuId": "ec6878faa6",
+      "lieuNom": "Village de vacances des Aresquiers (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Frontignan",
+      "date": "2024-06-20",
+      "auteur": "Théo (simulé)",
+      "blocs": {
+        "stationnement": "conforme",
+        "entrees": "conforme",
+        "chambre": "conforme",
+        "sanitaires": "conforme",
+        "restauration": "conforme",
+        "transport": "pas_vu"
+      },
+      "photo": false,
+      "commentaire": "Retour de plus de 24 mois : il ne compte plus.",
+      "demo": true
+    },
+    {
+      "id": "demo-r12",
+      "lieuId": "758a6020db",
+      "lieuNom": "Hôtel de l'Écusson (lieu fictif)",
+      "categorie": "hebergement",
+      "commune": "Montpellier",
+      "date": "2026-11-02",
+      "auteur": "Camille (simulé)",
+      "blocs": {
+        "stationnement": "non_conforme",
+        "entrees": "conforme",
+        "chambre": "conforme",
+        "sanitaires": "conforme",
+        "restauration": "pas_vu",
+        "transport": "conforme"
+      },
+      "photo": false,
+      "commentaire": "Pas de place PMR assez longue pour notre véhicule à rampe arrière, il a fallu se garer à 300 m.",
+      "demo": true
+    }
+  ],
+  "sejours": [
+    {
+      "id": "demo-s1",
+      "date": "2026-10-06",
+      "auteur": "Camille (simulé)",
+      "commune": "Sète",
+      "jours": 3,
+      "ressenti": "sans_rupture",
+      "commentaire": "Hébergement et activités enchaînés sans mauvaise surprise. Les trajets estimés étaient un peu optimistes.",
+      "demo": true
+    },
+    {
+      "id": "demo-s2",
+      "date": "2026-09-23",
+      "auteur": "Foyer Les Oliviers (simulé)",
+      "commune": "Sète",
+      "jours": 4,
+      "ressenti": "quelques_ruptures",
+      "commentaire": "Une plage annoncée accessible n'avait pas de tapis ce jour-là : on a remplacé par une visite.",
+      "demo": true
+    },
+    {
+      "id": "demo-s3",
+      "date": "2026-07-21",
+      "auteur": "Famille Roux (simulé)",
+      "commune": "Agde",
+      "jours": 5,
+      "ressenti": "difficile",
+      "commentaire": "Le gravier du gîte et un restaurant avec une marche nous ont obligés à réorganiser deux journées.",
+      "demo": true
+    }
+  ]
+}

@@ -21,12 +21,13 @@ Ce n'est pas un service en production : la maquette sert à recueillir des retou
 | `/lieu/?id=…` | Fiche d'un lieu, avec sources, niveaux de preuve et questions à poser |
 | `/sejour` | Séjour d'un particulier : destination, hébergement, programme jour par jour |
 | `/pro` | Séjour de groupe pour les structures, en cinq étapes |
+| `/communaute` | Retours des voyageurs sur l'itinéraire et confirmation, bloc par bloc, de l'accessibilité des lieux (retours de démonstration sur les lieux fictifs) |
 | `/dossier` | Dossier de séjour à imprimer ou enregistrer en PDF (`?groupe=1` pour le groupe) |
 | `/demo` | Pour l'enquêteur : personas, remise à zéro, signaux notés pendant l'entretien |
 | `/tarifs` | Offres et prix à tester (rien n'est en vente) |
 | `/pro/tableau-de-bord` | Écran de démonstration, données inventées |
 
-Les itinéraires sont proposés par des règles simples (`lib/itinerary`) et les trajets sont **estimés** à vol d'oiseau (`lib/routing.ts`) : il n'y a pas encore de calcul d'itinéraire réel.
+Les itinéraires sont proposés par des règles simples (`lib/itinerary`), avec un budget sur le séjour entier et un filtre Chèques-Vacances (`lib/budget.ts`, prix et acceptation **simulés**) et les trajets sont **estimés** à vol d'oiseau (`lib/routing.ts`) : il n'y a pas encore de calcul d'itinéraire réel.
 
 Préparer les entretiens : [`docs/guide-entretien.md`](docs/guide-entretien.md). Présentation : [`docs/presentation-enseignants.md`](docs/presentation-enseignants.md).
 

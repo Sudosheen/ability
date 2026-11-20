@@ -51,6 +51,15 @@ describe("generateItinerary", () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
+  it("écarte les activités trop chères pour le budget restant", () => {
+    const list = [cand("cher", "activite", near(0.01)), cand("gratuit", "activite", near(0.03)), cand("moyen", "activite", near(0.02))];
+    const prix: Record<string, number> = { cher: 50, moyen: 20, gratuit: 0 };
+    const days = generateItinerary(BASE, list, { ...options, jours: 1, budgetActivites: 25, coutActivite: (c) => prix[c.id] });
+    const ids = days.flat().map((s) => s.lieu?.id).filter(Boolean);
+    expect(ids).not.toContain("cher");
+    expect(ids).toEqual(expect.arrayContaining(["moyen", "gratuit"]));
+  });
+
   it("n'utilise jamais un lieu incompatible", () => {
     const days = generateItinerary(BASE, [cand("non", "activite", near(0.01), "incompatible")], options);
     expect(days.flat().every((s) => s.lieu === null)).toBe(true);

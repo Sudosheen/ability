@@ -13,6 +13,7 @@ import {
   removeStop,
   type Trip,
 } from "@/lib/trip";
+import { OfferLine } from "./budget-panel";
 import { DAY_COLORS } from "./route-map";
 
 function LegLine({ leg, from }: { leg: Leg; from?: string }) {
@@ -106,6 +107,7 @@ export function DayPlanner({
                         </Button>
                       </span>
                     </div>
+                    <OfferLine id={s.id} c={s.c} className="px-2 pt-1 pl-14" />
                     {legs[base ? i + 1 : i] && (i < day.length - 1 || base) && (
                       <LegLine leg={legs[base ? i + 1 : i]} from={i === day.length - 1 ? "Retour à l'hébergement" : undefined} />
                     )}
