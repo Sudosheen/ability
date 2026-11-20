@@ -39,6 +39,12 @@ Le bouton « Donner mon avis » apparaît sur chaque écran quand l'adresse d'un
 NEXT_PUBLIC_TALLY_URL=https://tally.so/r/xxxxxx pnpm build
 ```
 
+Sous PowerShell (Windows), la variable se pose avant la commande :
+
+```powershell
+$env:NEXT_PUBLIC_TALLY_URL = "https://tally.so/r/xxxxxx"; pnpm build
+```
+
 Ajoutez au formulaire un champ caché nommé `ecran` : il reçoit l'adresse de la page d'où vient le retour. Sur GitHub Pages, renseignez la variable `NEXT_PUBLIC_TALLY_URL` dans les variables du dépôt.
 
 ## Démarrer
@@ -78,7 +84,7 @@ pnpm dev
 | [OpenStreetMap](https://www.openstreetmap.org) via Overpass | Avis global fauteuil (oui, partiel, non), toilettes, stationnement adapté | ODbL 1.0 |
 | [Tourisme & Handicap](https://data.economie.gouv.fr/explore/dataset/liste-des-etablissements-labellises-tourisme-et-handicap) | Établissements labellisés (liste figée fin 2020) | Licence Ouverte 2.0 |
 
-La base fusionnée contient des données OpenStreetMap : elle est mise à disposition sous licence ODbL, avec la mention « © les contributeurs d'OpenStreetMap ».
+La base fusionnée contient des données OpenStreetMap : elle est mise à disposition sous licence **ODbL 1.0**, avec la mention « © les contributeurs d'OpenStreetMap ». Détail, mention à reprendre et périmètre : [`LICENCE-DONNEES.md`](LICENCE-DONNEES.md). L'ETL joint la licence aux données publiées (`public/data/LICENCE.txt`). Le code n'a pas encore de licence.
 
 ### La chaîne de traitement (`scripts/etl/`)
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FlaskConical } from "lucide-react";
+import { BASE_PATH } from "@/lib/data";
 import type { Meta } from "@/lib/server-data";
 
 /** Bandeau permanent : la maquette ne doit jamais passer pour un service en production. */
@@ -92,8 +93,12 @@ export function SiteFooter({ meta }: { meta: Meta }) {
         </p>
         <p>
           Sources : {meta.sources.map((s) => s.attribution).join(" · ")}. La base fusionnée contient
-          des données © les contributeurs d&apos;OpenStreetMap : elle est mise à disposition sous
-          licence ODbL.
+          des données © les contributeurs d&apos;OpenStreetMap : elle est mise à disposition sous{" "}
+          {/* Fichiers statiques produits par l'ETL : lien simple, pas une route Next. */}
+          <a href={`${BASE_PATH}/data/LICENCE.txt`} className="font-bold text-ink-900 underline underline-offset-4">
+            licence ODbL 1.0
+          </a>
+          .
         </p>
         <p>
           <Link href="/#preuves" className="font-bold text-ink-900 underline underline-offset-4">

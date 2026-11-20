@@ -14,7 +14,7 @@
  *   data/report/qualite.{json,md}     rapport qualité
  */
 import { createHash } from "node:crypto";
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { DuckDBInstance, type DuckDBConnection } from "@duckdb/node-api";
 import {
@@ -537,11 +537,34 @@ ${Object.entries(poids).map(([f, o]) => `- \`${f}\` : ${(o / 1e6).toFixed(2)} Mo
 `;
   await writeFile(path.join(REPORT, "qualite.md"), md);
 
+  // Licence jointe aux données publiées : la base fusionnée contient des
+  // données OpenStreetMap, elle est diffusée sous ODbL 1.0.
+  await writeFile(
+    path.join(OUT, "LICENCE.txt"),
+    [
+      "Base de données Ability : lieux de l'Hérault et critères d'accessibilité.",
+      "",
+      "Cette base est mise à disposition sous la licence Open Database License (ODbL) 1.0.",
+      "Texte complet : ODBL-1.0.txt (dans ce dossier) ou https://opendatacommons.org/licenses/odbl/1-0/",
+      "",
+      "Mention à reprendre :",
+      "Données d'accessibilité : Ability, à partir d'Acceslibre (Licence Ouverte 2.0), de la liste des",
+      "établissements labellisés Tourisme & Handicap (Licence Ouverte 2.0) et d'OpenStreetMap,",
+      "© les contributeurs d'OpenStreetMap (ODbL 1.0).",
+      "",
+      "Les lieux marqués « lieu fictif » sont inventés pour la démonstration.",
+      "Données non vérifiées sur place, fournies sans garantie.",
+      "",
+    ].join("\n"),
+  );
+  await copyFile(path.join(ROOT, "data/ODBL-1.0.txt"), path.join(OUT, "ODBL-1.0.txt"));
+
   // Métadonnées pour l'interface (pied de page, à propos, légende).
   await writeFile(
     path.join(OUT, "meta.json"),
     JSON.stringify({
       genereLe: now.toISOString(),
+      licence: "ODbL-1.0",
       sources: manifest.sources.map((s) => ({
         id: s.id,
         titre: s.titre,
