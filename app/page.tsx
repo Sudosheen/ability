@@ -135,7 +135,7 @@ export default function HomePage() {
                   </span>
                   <h3 className="text-2xl">{title}</h3>
                   <p className="text-ink-700">{text}</p>
-                  <Button asChild variant="dark" className="mt-auto self-start">
+                  <Button asChild variant="dark" className="mt-auto h-auto max-w-full self-start py-2 whitespace-normal">
                     <Link href={href}>
                       {cta}
                       <ArrowRight aria-hidden="true" />
