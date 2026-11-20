@@ -313,7 +313,7 @@ export function ResultsPage({ communes }: { communes: Commune[] }) {
               {results.length > shown.length && (
                 <Button
                   variant="outline"
-                  className="h-auto max-w-full flex-wrap self-center py-2 whitespace-normal"
+                  className="flex-wrap self-center"
                   onClick={() => setLimit((l) => l + PAGE)}
                 >
                   Afficher {Math.min(PAGE, results.length - shown.length)} résultats de plus
