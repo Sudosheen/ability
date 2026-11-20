@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Building2, Map as MapIcon, User } from "lucide-react";
+import { SunMark } from "@/components/ability/brand";
 import { SearchBar } from "@/components/ability/search-bar";
 import { SiteFooter } from "@/components/ability/site-chrome";
 import { ProofBadge } from "@/components/ability/status";
@@ -20,14 +21,8 @@ export default function HomePage() {
       <main id="contenu">
         {/* Héro */}
         <section className="relative overflow-hidden bg-butter-100">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -top-40 -right-32 size-[34rem] rounded-full bg-sun-400"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -top-16 right-24 size-72 rounded-full bg-butter-300 max-lg:hidden"
-          />
+          {/* Le soleil du logo en décor, à droite du titre sur grand écran. */}
+          <SunMark className="pointer-events-none absolute top-8 right-[6%] h-[30rem] w-auto opacity-90 max-lg:hidden" />
           <div className="relative mx-auto flex max-w-7xl flex-col gap-8 px-4 pt-14 pb-16 lg:pt-20 lg:pb-24">
             <div className="flex max-w-3xl flex-col gap-4">
               <h1 className="text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">

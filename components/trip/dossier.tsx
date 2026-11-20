@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Printer } from "lucide-react";
+import { LogoFull } from "@/components/ability/brand";
 import { CompatibilityPill } from "@/components/ability/status";
 import { Button } from "@/components/ui/button";
 import { getPlace } from "@/lib/data";
@@ -104,7 +105,10 @@ export function Dossier() {
   return (
     <article className="flex flex-col gap-6 print:gap-4 print:text-[11pt]">
       <header className="flex flex-col gap-2">
-        <p className="text-sm font-bold tracking-wide text-ink-600 uppercase">Ability · dossier de séjour</p>
+        <div className="flex items-center justify-between gap-4">
+          <p className="text-sm font-bold tracking-wide text-ink-600 uppercase">Dossier de séjour</p>
+          <LogoFull className="w-32 print:w-28" />
+        </div>
         <h1 className="text-4xl">
           {isGroup ? g.nom : "Mon séjour"}
           {trip.commune ? ` à ${trip.commune}` : ""}
