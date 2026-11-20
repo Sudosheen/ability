@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Search } from "lucide-react";
+import Image from "next/image";
+import logoBlanc from "@/assets/brand/ability-logo-blanc.png";
+import { LogoFull, LogoLockup, SLOGAN, SunMark } from "@/components/ability/brand";
 import { PlaceCard } from "@/components/ability/place-card";
 import { SearchBar } from "@/components/ability/search-bar";
 import { SiteFooter } from "@/components/ability/site-chrome";
@@ -55,6 +58,49 @@ export default function DesignPage() {
           Les briques de l&apos;interface Ability. Règle de base : le jaune est un fond, jamais une
           couleur de texte, et aucun statut ne repose sur la couleur seule.
         </p>
+
+        <Block title="Logo">
+          <p className="max-w-2xl text-ink-700">
+            Un soleil en forme de C, le nom en capitales et le slogan « {SLOGAN} ». Fichiers d&apos;origine dans{" "}
+            <code>assets/brand/</code>.
+          </p>
+          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <li className="flex flex-col gap-2">
+              <div className="flex h-48 items-center justify-center rounded-2xl border border-ink-200 bg-white p-6">
+                <LogoFull className="max-h-full w-auto" />
+              </div>
+              <p className="text-sm text-ink-600">Logo complet, sur fond clair (pied de page, dossier).</p>
+            </li>
+            <li className="flex flex-col gap-2">
+              <div className="flex h-48 items-center justify-center rounded-2xl bg-ink-900 p-6">
+                <LogoFull fondFonce className="max-h-full w-auto" />
+              </div>
+              <p className="text-sm text-ink-600">Sur fond foncé : texte en blanc.</p>
+            </li>
+            <li className="flex flex-col gap-2">
+              <div className="flex h-48 items-center justify-center rounded-2xl bg-ink-700 p-6">
+                <Image src={logoBlanc} alt="Ability, le monde est à vous (version blanche)" className="max-h-full w-auto" />
+              </div>
+              <p className="text-sm text-ink-600">Tout en blanc, sur une photo ou une couleur.</p>
+            </li>
+            <li className="flex flex-col gap-2">
+              <div className="flex h-48 items-center justify-center rounded-2xl border border-ink-200 bg-butter-50 p-6">
+                <LogoLockup />
+              </div>
+              <p className="text-sm text-ink-600">Version horizontale, pour l&apos;en-tête : le slogan y serait illisible.</p>
+            </li>
+            <li className="flex flex-col gap-2">
+              <div className="flex h-48 items-center justify-center rounded-2xl border border-ink-200 bg-white p-6">
+                <SunMark className="max-h-full w-auto" />
+              </div>
+              <p className="text-sm text-ink-600">Le soleil seul : icône du site et décor de l&apos;accueil.</p>
+            </li>
+          </ul>
+          <p className="max-w-2xl text-sm text-ink-600">
+            Le jaune du logo (#F9B233) est une couleur de marque, pas une couleur de texte : comme pour la palette,
+            jamais de texte jaune sur fond clair. Ne pas déformer, recolorer ni recadrer le logo.
+          </p>
+        </Block>
 
         <Block title="Couleurs">
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

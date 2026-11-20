@@ -2,6 +2,7 @@
  * Séjour : une destination, des dates, un hébergement et un programme jour
  * par jour. Les étapes gardent de quoi s'afficher sans recharger les fiches.
  */
+import { sanitizeBudget, type BudgetSettings } from "./budget.ts";
 import type { Category } from "./types.ts";
 
 export type Creneau = "matin" | "midi" | "apres-midi";
@@ -30,6 +31,8 @@ export type Trip = {
   hebergement: TripStop | null;
   /** Un tableau d'étapes par jour. */
   programme: TripStop[][];
+  /** Budget et moyens de paiement (absent des séjours enregistrés avant). */
+  budget?: BudgetSettings | null;
 };
 
 export const JOURS_MIN = 1;
@@ -124,6 +127,7 @@ export function sanitizeTrip(raw: unknown): Trip | null {
     au: date(r.au),
     hebergement: sanitizeStop(r.hebergement),
     programme: programme.length ? programme : emptyTrip().programme,
+    budget: sanitizeBudget(r.budget),
   };
 }
 

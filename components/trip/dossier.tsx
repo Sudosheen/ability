@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Printer } from "lucide-react";
+import { LogoFull } from "@/components/ability/brand";
 import { CompatibilityPill } from "@/components/ability/status";
 import { Button } from "@/components/ui/button";
 import { getPlace } from "@/lib/data";
@@ -16,6 +17,7 @@ import { dayLegs, formatLeg } from "@/lib/routing";
 import { useGroup, useGroupTrip, useProfile, useTrip } from "@/lib/storage";
 import { CRENEAU_LABELS, dayLabel, type TripStop } from "@/lib/trip";
 import type { Place } from "@/lib/types";
+import { BudgetSummary } from "./budget-panel";
 import { RouteMap } from "./route-map";
 
 const NUMEROS = [
@@ -95,6 +97,10 @@ export function Dossier() {
     );
   }
 
+  // Budget : mêmes réglages que dans le parcours (personnes du groupe, chambres, lève-personne à louer).
+  const fixed = isGroup ? { voyageurs: g.residents.length, accompagnants: g.accompagnants } : undefined;
+  const levePersonne = profile.transfert === "leve_personne" && profile.levePersonne === "sur_place";
+
   const attention = stops
     .map((s) => ({ s, e: evalOf(s) }))
     .filter((x): x is { s: TripStop; e: Evaluation } => x.e !== null && x.e.statut !== "compatible");
@@ -104,7 +110,10 @@ export function Dossier() {
   return (
     <article className="flex flex-col gap-6 print:gap-4 print:text-[11pt]">
       <header className="flex flex-col gap-2">
-        <p className="text-sm font-bold tracking-wide text-ink-600 uppercase">Ability · dossier de séjour</p>
+        <div className="flex items-center justify-between gap-4">
+          <p className="text-sm font-bold tracking-wide text-ink-600 uppercase">Dossier de séjour</p>
+          <LogoFull className="w-32 print:w-28" />
+        </div>
         <h1 className="text-4xl">
           {isGroup ? g.nom : "Mon séjour"}
           {trip.commune ? ` à ${trip.commune}` : ""}
@@ -238,6 +247,11 @@ export function Dossier() {
           );
         })}
         <RouteMap trip={trip} className="break-inside-avoid" />
+      </section>
+
+      <section className="flex flex-col gap-2 break-inside-avoid">
+        <H2>Budget</H2>
+        <BudgetSummary trip={trip} fixed={fixed} rooms={isGroup ? rooms : undefined} levePersonne={levePersonne} />
       </section>
 
       <section className="flex flex-col gap-2">

@@ -3,8 +3,11 @@
  * continue, on remplacera ici les fichiers statiques par une base, sans
  * toucher aux écrans.
  */
+import demoCommunity from "../data/demo/retours-fictifs.json";
+import { simulatedOffer, type Offer } from "./budget";
+import type { CommunityData } from "./community";
 import type { LayerFile } from "./labels";
-import type { Place, PlaceFeatureProps } from "./types";
+import type { Category, Place, PlaceFeatureProps } from "./types";
 
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -74,4 +77,18 @@ export function findCommune(communes: Commune[], query: string): Commune | null 
     communes.find((c) => normalize(c.nom).includes(q)) ??
     null
   );
+}
+
+/**
+ * Prix et moyens de paiement d'un lieu. Dans la maquette, tout est simulé à
+ * partir de l'identifiant du lieu ; plus tard, les tarifs viendront des
+ * partenaires et la liste des prestataires conventionnés, de l'ANCV.
+ */
+export function getOffer(id: string, categorie: Category): Offer {
+  return simulatedOffer(id, categorie);
+}
+
+/** Retours de démonstration de la communauté (inventés, sur les lieux fictifs seulement). */
+export function getDemoCommunity(): CommunityData {
+  return { retours: demoCommunity.retours, sejours: demoCommunity.sejours } as CommunityData;
 }

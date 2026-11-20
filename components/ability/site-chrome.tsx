@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FlaskConical } from "lucide-react";
+import { LogoFull, LogoLockup } from "@/components/ability/brand";
 import { BASE_PATH } from "@/lib/data";
 import type { Meta } from "@/lib/server-data";
 
@@ -16,18 +17,6 @@ export function DemoBanner() {
   );
 }
 
-export function Wordmark() {
-  return (
-    <span className="inline-flex items-center gap-2 text-2xl font-extrabold tracking-tight text-ink-900">
-      <span
-        aria-hidden="true"
-        className="inline-block size-6 rounded-full border-2 border-ink-900 bg-sun-400"
-      />
-      Ability
-    </span>
-  );
-}
-
 const navLink =
   "inline-flex min-h-11 items-center rounded-full px-3 text-sm font-bold whitespace-nowrap text-ink-900 hover:bg-butter-100 sm:px-4 sm:text-base";
 
@@ -35,8 +24,8 @@ export function SiteHeader() {
   return (
     <header className="border-b border-ink-200 bg-white print:hidden">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-2">
-        <Link href="/" aria-label="Ability, accueil" className="rounded-full">
-          <Wordmark />
+        <Link href="/" aria-label="Ability, accueil" className="rounded-lg">
+          <LogoLockup />
         </Link>
         <nav aria-label="Navigation principale">
           <ul className="-mx-3 flex flex-wrap items-center sm:mx-0 sm:gap-1">
@@ -53,6 +42,11 @@ export function SiteHeader() {
             <li>
               <Link href="/sejour/" className={navLink}>
                 Mon séjour
+              </Link>
+            </li>
+            <li>
+              <Link href="/communaute/" className={navLink}>
+                Communauté
               </Link>
             </li>
             <li>
@@ -81,7 +75,7 @@ export function SiteFooter({ meta }: { meta: Meta }) {
   return (
     <footer className="mt-auto border-t border-ink-200 bg-white print:hidden">
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-ink-600">
-        <Wordmark />
+        <LogoFull className="w-56" />
         <p>
           Maquette de démonstration (preuve de concept). Territoire : Hérault. Données générées le{" "}
           {date}.

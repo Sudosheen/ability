@@ -1,6 +1,5 @@
 import { ExternalLink, MessageCircleQuestion, PencilLine } from "lucide-react";
 import { CategoryIcon } from "@/components/ability/category-icon";
-import { NotYetButton } from "@/components/ability/not-yet";
 import { AccessPill, ProofBadge } from "@/components/ability/status";
 import {
   CRITERIA,
@@ -252,26 +251,6 @@ export function PlaceDetail({ place, hideUnknown = false }: { place: Place; hide
               </li>
             ))}
           </ul>
-          <h4 className="mt-2 font-extrabold">Vous y êtes allé·e ?</h4>
-          <p className="text-sm text-ink-600">
-            Dites-nous si cette fiche correspond à ce que vous avez trouvé sur place.
-          </p>
-          <div className="flex flex-wrap gap-x-3">
-            <NotYetButton
-              variant="outline"
-              signal={{ type: "verification", detail: "fiche exacte" }}
-              message="Merci ! Dans la version complète, deux retours concordants font passer une information au niveau « confirmé par la communauté »."
-            >
-              Oui, c&apos;était exact
-            </NotYetButton>
-            <NotYetButton
-              variant="outline"
-              signal={{ type: "verification", detail: "fiche inexacte" }}
-              message="Merci ! Dans la version complète, vous pourrez dire quel critère est faux et ajouter une photo."
-            >
-              Non, il y a une erreur
-            </NotYetButton>
-          </div>
           <h4 className="mt-2 font-extrabold">Une erreur, une information en plus ?</h4>
           <p className="text-sm text-ink-600">
             Les fiches se corrigent à la source, et la correction profite à tout le monde.

@@ -30,6 +30,13 @@ export type ItineraryOptions = {
   rayonActiviteKm: number;
   /** Distance maximale entre l'activité du matin et le restaurant, en km. */
   rayonDejeunerKm: number;
+  /**
+   * Somme disponible pour les activités, en euros (filtre de budget). Absente :
+   * pas de plafond. Une activité trop chère pour ce qui reste est écartée.
+   */
+  budgetActivites?: number;
+  /** Prix d'une activité pour tout le groupe. Requis avec `budgetActivites`. */
+  coutActivite?: (c: Candidate) => number;
 };
 
 export const DEFAULT_OPTIONS: Omit<ItineraryOptions, "jours"> = {
@@ -47,12 +54,20 @@ function score(c: Candidate, from: LatLng) {
   return RANG[c.statut] * 1000 + c.aConfirmer * 20 + haversineKm(c, from);
 }
 
-function best(list: Candidate[], from: LatLng, maxKm: number, used: Set<string>): Candidate | null {
+function best(
+  list: Candidate[],
+  from: LatLng,
+  maxKm: number,
+  used: Set<string>,
+  maxCost = Infinity,
+  cost: (c: Candidate) => number = () => 0,
+): Candidate | null {
   let pick: Candidate | null = null;
   let pickScore = Infinity;
   for (const c of list) {
     if (used.has(c.id) || c.statut === "incompatible") continue;
     if (haversineKm(c, from) > maxKm) continue;
+    if (cost(c) > maxCost) continue;
     const s = score(c, from);
     if (s < pickScore || (s === pickScore && pick && c.id < pick.id)) {
       pick = c;
@@ -67,15 +82,25 @@ export function generateItinerary(base: LatLng, candidates: Candidate[], options
   const restaurants = candidates.filter((c) => c.c === "restauration");
   const used = new Set<string>();
   const days: PlannedStop[][] = [];
+  const cost = options.coutActivite ?? (() => 0);
+  let reste = options.budgetActivites ?? Infinity;
+  const pickActivity = (from: LatLng, maxKm: number) => {
+    const c = best(activites, from, maxKm, used, reste, cost);
+    if (c) {
+      used.add(c.id);
+      reste -= cost(c);
+    }
+    return c;
+  };
+  const budgetNote = options.budgetActivites !== undefined ? " dans le budget" : "";
 
   for (let d = 0; d < options.jours; d++) {
     const day: PlannedStop[] = [];
-    const matin = best(activites, base, options.rayonActiviteKm, used);
-    if (matin) used.add(matin.id);
+    const matin = pickActivity(base, options.rayonActiviteKm);
     day.push(
       matin
         ? { creneau: "matin", lieu: matin }
-        : { creneau: "matin", lieu: null, raison: `Aucune activité compatible ou à confirmer à moins de ${options.rayonActiviteKm} km.` },
+        : { creneau: "matin", lieu: null, raison: `Aucune activité compatible ou à confirmer${budgetNote} à moins de ${options.rayonActiviteKm} km.` },
     );
 
     const autour = matin ?? base;
@@ -90,9 +115,7 @@ export function generateItinerary(base: LatLng, candidates: Candidate[], options
     if (options.activitesParJour === 2) {
       // L'après-midi, on reste près du matin pour limiter les trajets.
       const apresMidi =
-        best(activites, autour, Math.min(10, options.rayonActiviteKm), used) ??
-        best(activites, base, options.rayonActiviteKm, used);
-      if (apresMidi) used.add(apresMidi.id);
+        pickActivity(autour, Math.min(10, options.rayonActiviteKm)) ?? pickActivity(base, options.rayonActiviteKm);
       day.push(
         apresMidi
           ? { creneau: "apres-midi", lieu: apresMidi }

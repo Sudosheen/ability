@@ -13,6 +13,7 @@ import { evaluate } from "@/lib/matching";
 import { aggregateProfile, emptyGroup, roomsNeeded } from "@/lib/group";
 import { useGroup, useProfile } from "@/lib/storage";
 import { AddToTrip } from "@/components/trip/add-to-trip";
+import { PlaceCommunity } from "@/components/community/place-community";
 import type { Place } from "@/lib/types";
 
 type State = { id: string; place: Place | null } | { id: string; error: true };
@@ -94,6 +95,7 @@ export function PlacePage() {
             </section>
           )}
           <PlaceDetail place={place} hideUnknown={Boolean(profile)} />
+          <PlaceCommunity place={place} />
           {!isGroup && <AddToTrip place={place} />}
         </>
       )}

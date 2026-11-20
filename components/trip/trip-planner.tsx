@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, FileText, Trash2 } from "lucide-react";
+import { ArrowRight, FileText, MessagesSquare, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Commune } from "@/lib/data";
 import { describeProfile } from "@/lib/profile";
 import { tripStore, useProfile, useTrip } from "@/lib/storage";
 import { emptyTrip, type Trip } from "@/lib/trip";
+import { BudgetSettingsForm, BudgetSummary } from "./budget-panel";
 import { LodgingPicker, ProgramEditor, TripSettings } from "./trip-sections";
 import { useEvaluatedPlaces } from "./use-candidates";
 
@@ -31,6 +32,7 @@ export function TripPlanner({ communes }: { communes: Commune[] }) {
   const trip = stored ?? emptyTrip();
   const save = (t: Trip) => tripStore.save(t);
   const { evaluated, error } = useEvaluatedPlaces(profile, { chambres: 1 });
+  const levePersonne = profile?.transfert === "leve_personne" && profile.levePersonne === "sur_place";
 
   if (!profile) {
     return (
@@ -68,15 +70,20 @@ export function TripPlanner({ communes }: { communes: Commune[] }) {
         <TripSettings trip={trip} onChange={save} communes={communes} />
       </Step>
 
-      <Step n={2} title="Hébergement">
+      <Step n={2} title="Budget et moyens de paiement">
+        <BudgetSettingsForm trip={trip} onChange={save} />
+      </Step>
+
+      <Step n={3} title="Hébergement">
         <LodgingPicker trip={trip} onChange={save} communes={communes} evaluated={evaluated} />
       </Step>
 
-      <Step n={3} title="Programme jour par jour">
-        <ProgramEditor trip={trip} onChange={save} communes={communes} evaluated={evaluated} />
+      <Step n={4} title="Programme jour par jour">
+        <ProgramEditor trip={trip} onChange={save} communes={communes} evaluated={evaluated} levePersonne={levePersonne} />
+        <BudgetSummary trip={trip} levePersonne={levePersonne} />
       </Step>
 
-      <Step n={4} title="Dossier de séjour">
+      <Step n={5} title="Dossier de séjour">
         <p className="text-ink-700">
           Tout le séjour sur une page à imprimer ou à enregistrer en PDF : besoins, hébergement, programme,
           points à confirmer, numéros utiles.
@@ -101,6 +108,19 @@ export function TripPlanner({ communes }: { communes: Commune[] }) {
             </Button>
           )}
         </div>
+      </Step>
+
+      <Step n={6} title="Après le séjour">
+        <p className="text-ink-700">
+          Racontez comment l&apos;itinéraire s&apos;est passé et confirmez, lieu par lieu, ce que vous avez trouvé sur
+          place. Vos retours rendent les fiches plus sûres pour les suivants.
+        </p>
+        <Button asChild variant="outline" className="self-start">
+          <Link href="/communaute/#donner-un-retour">
+            <MessagesSquare aria-hidden="true" />
+            Donner mon retour à la communauté
+          </Link>
+        </Button>
       </Step>
     </div>
   );

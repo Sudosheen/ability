@@ -8,6 +8,7 @@ import { cn } from "cn";
 import { EvaluationSummary } from "@/components/ability/evaluation";
 import { PlaceCard } from "@/components/ability/place-card";
 import { PlaceDetail } from "@/components/ability/place-detail";
+import { PlaceCommunity } from "@/components/community/place-community";
 import { CategoryFilter, COMPAT_ORDER, ProfileBox, StatusFilter, type Coloring } from "@/components/map/filters";
 import { MapCanvas, type MapPoint, type MapTarget } from "@/components/map/map-canvas";
 import { COMPAT_LOOK } from "@/components/map/marker-sprites";
@@ -286,6 +287,7 @@ export function ExplorePage({ communes, categoryCounts }: { communes: Commune[];
                 />
               )}
               <PlaceDetail place={shownPlace} hideUnknown={Boolean(profile)} />
+              <PlaceCommunity place={shownPlace} />
               <AddToTrip place={shownPlace} />
               <Button asChild variant="dark" className="self-start">
                 <Link href={`/lieu/?id=${shownPlace.id}`}>
