@@ -6,6 +6,7 @@
  * maquette n'en a pas.
  */
 import { useSyncExternalStore } from "react";
+import { sanitizeCommunity, type CommunityData } from "./community";
 import { sanitizeGroup, type Group } from "./group";
 import { sanitizeProfile, type NeedsProfile } from "./profile";
 import { sanitizeTrip, type Trip } from "./trip";
@@ -74,6 +75,8 @@ export const profileStore = createStore<NeedsProfile>("ability:profil", sanitize
 export const groupStore = createStore<Group>("ability:groupe", sanitizeGroup);
 export const tripStore = createStore<Trip>("ability:sejour", sanitizeTrip);
 export const groupTripStore = createStore<Trip>("ability:sejour-groupe", sanitizeTrip);
+/** Retours que la personne a donnés à la communauté (dans la maquette, ils restent ici). */
+export const communityStore = createStore<CommunityData>("ability:communaute", sanitizeCommunity);
 
 export const readProfile = profileStore.read;
 export const saveProfile = profileStore.save;
@@ -94,4 +97,8 @@ export function useTrip(): Trip | null {
 
 export function useGroupTrip(): Trip | null {
   return groupTripStore.use();
+}
+
+export function useCommunity(): CommunityData | null {
+  return communityStore.use();
 }

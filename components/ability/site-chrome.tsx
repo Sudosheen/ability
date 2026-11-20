@@ -45,6 +45,11 @@ export function SiteHeader() {
               </Link>
             </li>
             <li>
+              <Link href="/communaute/" className={navLink}>
+                Communauté
+              </Link>
+            </li>
+            <li>
               <Link href="/pro/" className={navLink}>
                 Structures
               </Link>

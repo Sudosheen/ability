@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, FileText, Plus, Printer, Trash2 } from "lucide-react";
 import { cn } from "cn";
 import { Button } from "@/components/ui/button";
+import { BudgetSettingsForm, BudgetSummary } from "@/components/trip/budget-panel";
 import { LodgingPicker, ProgramEditor, TripSettings } from "@/components/trip/trip-sections";
 import { useEvaluatedPlaces } from "@/components/trip/use-candidates";
 import type { Commune } from "@/lib/data";
@@ -13,7 +14,7 @@ import { describeProfile, LARGEUR_MAX, LARGEUR_MIN, PRESETS, type PresetId } fro
 import { groupStore, groupTripStore, useGroup, useGroupTrip } from "@/lib/storage";
 import { emptyTrip, type Trip } from "@/lib/trip";
 
-const STEPS = ["Profil du groupe", "Destination et dates", "Hébergement", "Itinéraire", "Dossier"];
+const STEPS = ["Profil du groupe", "Destination, dates et budget", "Hébergement", "Itinéraire", "Dossier"];
 const input = "min-h-11 rounded-full border border-input bg-white px-4 font-bold";
 const GROUP_SUFFIX = "&groupe=1";
 
@@ -134,6 +135,8 @@ export function GroupWizard({ communes }: { communes: Commune[] }) {
   const { evaluated, error } = useEvaluatedPlaces(profile, { chambres: rooms });
   const saveGroup = (g: Group) => groupStore.save(g);
   const saveTrip = (t: Trip) => groupTripStore.save(t);
+  const fixed = { voyageurs: group.residents.length, accompagnants: group.accompagnants };
+  const levePersonne = profile.transfert === "leve_personne" && profile.levePersonne === "sur_place";
 
   // À chaque changement d'écran, le focus va sur son titre (sauf au chargement).
   useEffect(() => {
@@ -180,12 +183,34 @@ export function GroupWizard({ communes }: { communes: Commune[] }) {
           </p>
         )}
         {step === 0 && <GroupStep group={group} onChange={saveGroup} />}
-        {step === 1 && <TripSettings trip={trip} onChange={saveTrip} communes={communes} />}
+        {step === 1 && (
+          <div className="flex flex-col gap-8">
+            <TripSettings trip={trip} onChange={saveTrip} communes={communes} />
+            <section aria-labelledby="titre-budget-groupe" className="flex flex-col gap-3 border-t border-ink-200 pt-6">
+              <h3 id="titre-budget-groupe" className="text-2xl">
+                Budget et moyens de paiement
+              </h3>
+              <BudgetSettingsForm trip={trip} onChange={saveTrip} fixed={fixed} />
+            </section>
+          </div>
+        )}
         {step === 2 && (
           <LodgingPicker trip={trip} onChange={saveTrip} communes={communes} evaluated={evaluated} lieuSuffix={GROUP_SUFFIX} rooms={rooms} />
         )}
         {step === 3 && (
-          <ProgramEditor trip={trip} onChange={saveTrip} communes={communes} evaluated={evaluated} lieuSuffix={GROUP_SUFFIX} />
+          <>
+            <ProgramEditor
+              trip={trip}
+              onChange={saveTrip}
+              communes={communes}
+              evaluated={evaluated}
+              lieuSuffix={GROUP_SUFFIX}
+              fixed={fixed}
+              rooms={rooms}
+              levePersonne={levePersonne}
+            />
+            <BudgetSummary trip={trip} fixed={fixed} rooms={rooms} levePersonne={levePersonne} />
+          </>
         )}
         {step === 4 && (
           <div className="flex flex-col gap-4">

@@ -17,6 +17,7 @@ import { dayLegs, formatLeg } from "@/lib/routing";
 import { useGroup, useGroupTrip, useProfile, useTrip } from "@/lib/storage";
 import { CRENEAU_LABELS, dayLabel, type TripStop } from "@/lib/trip";
 import type { Place } from "@/lib/types";
+import { BudgetSummary } from "./budget-panel";
 import { RouteMap } from "./route-map";
 
 const NUMEROS = [
@@ -95,6 +96,10 @@ export function Dossier() {
       </div>
     );
   }
+
+  // Budget : mêmes réglages que dans le parcours (personnes du groupe, chambres, lève-personne à louer).
+  const fixed = isGroup ? { voyageurs: g.residents.length, accompagnants: g.accompagnants } : undefined;
+  const levePersonne = profile.transfert === "leve_personne" && profile.levePersonne === "sur_place";
 
   const attention = stops
     .map((s) => ({ s, e: evalOf(s) }))
@@ -242,6 +247,11 @@ export function Dossier() {
           );
         })}
         <RouteMap trip={trip} className="break-inside-avoid" />
+      </section>
+
+      <section className="flex flex-col gap-2 break-inside-avoid">
+        <H2>Budget</H2>
+        <BudgetSummary trip={trip} fixed={fixed} rooms={isGroup ? rooms : undefined} levePersonne={levePersonne} />
       </section>
 
       <section className="flex flex-col gap-2">

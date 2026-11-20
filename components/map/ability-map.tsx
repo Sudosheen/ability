@@ -22,6 +22,7 @@ import { FilterChip } from "@/components/ability/filter-chip";
 import { PlaceCard } from "@/components/ability/place-card";
 import { PlaceDetail } from "@/components/ability/place-detail";
 import { AddToTrip } from "@/components/trip/add-to-trip";
+import { PlaceCommunity } from "@/components/community/place-community";
 import { COMPAT_LABELS } from "@/components/ability/status";
 import { Button } from "@/components/ui/button";
 import { findCommune, getLayer, getPlace, type Commune, type PlaceFeature } from "@/lib/data";
@@ -538,6 +539,7 @@ export function AbilityMap({
                   />
                 )}
                 <PlaceDetail place={shownPlace} hideUnknown={Boolean(profile)} />
+                <PlaceCommunity place={shownPlace} />
                 <AddToTrip place={shownPlace} />
                 <Button asChild variant="dark" className="self-start">
                   <Link href={`/lieu/?id=${shownPlace.id}`}>
