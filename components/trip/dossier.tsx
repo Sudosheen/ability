@@ -18,6 +18,7 @@ import { useGroup, useGroupTrip, useProfile, useTrip } from "@/lib/storage";
 import { CRENEAU_LABELS, dayLabel, type TripStop } from "@/lib/trip";
 import type { Place } from "@/lib/types";
 import { BudgetSummary } from "./budget-panel";
+import { FEATURES } from "@/lib/features";
 import { RouteMap } from "./route-map";
 
 const NUMEROS = [
@@ -249,10 +250,12 @@ export function Dossier() {
         <RouteMap trip={trip} className="break-inside-avoid" />
       </section>
 
-      <section className="flex flex-col gap-2 break-inside-avoid">
-        <H2>Budget</H2>
-        <BudgetSummary trip={trip} fixed={fixed} rooms={isGroup ? rooms : undefined} levePersonne={levePersonne} />
-      </section>
+      {FEATURES.budget && (
+        <section className="flex flex-col gap-2 break-inside-avoid">
+          <H2>Budget</H2>
+          <BudgetSummary trip={trip} fixed={fixed} rooms={isGroup ? rooms : undefined} levePersonne={levePersonne} />
+        </section>
+      )}
 
       <section className="flex flex-col gap-2">
         <H2>À confirmer avant de partir</H2>

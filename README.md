@@ -27,7 +27,7 @@ Ce n'est pas un service en production : la maquette sert à recueillir des retou
 | `/tarifs` | Offres et prix à tester (rien n'est en vente) |
 | `/pro/tableau-de-bord` | Écran de démonstration, données inventées |
 
-Les itinéraires sont proposés par des règles simples (`lib/itinerary`), avec un budget sur le séjour entier et un filtre Chèques-Vacances (`lib/budget.ts`, prix et acceptation **simulés**) et les trajets sont **estimés** à vol d'oiseau (`lib/routing.ts`) : il n'y a pas encore de calcul d'itinéraire réel.
+Les itinéraires sont proposés par des règles simples (`lib/itinerary`), avec un filtre Chèques-Vacances ANCV (acceptation **simulée**), et les trajets sont **estimés** à vol d'oiseau (`lib/routing.ts`) : il n'y a pas encore de calcul d'itinéraire réel. Le budget du séjour entier (`lib/budget.ts`) est codé mais masqué dans la maquette : `FEATURES.budget` dans `lib/features.ts`.
 
 Préparer les entretiens : [`docs/guide-entretien.md`](docs/guide-entretien.md). Présentation : [`docs/presentation-enseignants.md`](docs/presentation-enseignants.md).
 

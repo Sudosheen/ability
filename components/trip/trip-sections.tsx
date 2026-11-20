@@ -6,6 +6,7 @@ import { Check, Sparkles } from "lucide-react";
 import { PlaceCard } from "@/components/ability/place-card";
 import { Button } from "@/components/ui/button";
 import { acceptsChequesVacances, activityAllowance, activityCost } from "@/lib/budget";
+import { FEATURES } from "@/lib/features";
 import { findCommune, getOffer, type Commune } from "@/lib/data";
 import { DEFAULT_OPTIONS, generateItinerary } from "@/lib/itinerary";
 import { compareEvaluations } from "@/lib/matching";
@@ -222,7 +223,7 @@ export function ProgramEditor({
     onChange({ ...trip, programme });
     setMessage(
       `Programme proposé sur ${programme.length} jour${programme.length > 1 ? "s" : ""}.` +
-        (manques ? ` ${manques} créneau${manques > 1 ? "x restent" : " reste"} libre${manques > 1 ? "s" : ""}, faute de lieu compatible ou à confirmer${allowance !== null || settings.chequesVacances ? " dans vos critères de budget" : ""}.` : "") +
+        (manques ? ` ${manques} créneau${manques > 1 ? "x restent" : " reste"} libre${manques > 1 ? "s" : ""}, faute de lieu compatible ou à confirmer${allowance !== null ? " dans vos critères de budget" : settings.chequesVacances ? " qui accepte les Chèques-Vacances" : ""}.` : "") +
         (allowance !== null ? ` Il restait environ ${Math.round(allowance).toLocaleString("fr-FR")} € pour les activités, une fois l'hébergement et les repas estimés.` : "") +
         " Vérifiez les lieux « à confirmer » avant de réserver.",
     );
@@ -234,8 +235,10 @@ export function ProgramEditor({
         <h3 className="text-lg">Proposer un programme</h3>
         <p className="text-sm text-ink-700">
           Une activité le matin, un déjeuner tout près, une activité l&apos;après-midi. Jamais de lieu
-          incompatible ; les lieux compatibles d&apos;abord. Le budget et le filtre Chèques-Vacances
-          s&apos;appliquent s&apos;ils sont réglés.
+          incompatible ; les lieux compatibles d&apos;abord.{" "}
+          {FEATURES.budget
+            ? "Le budget et le filtre Chèques-Vacances s'appliquent s'ils sont réglés."
+            : "Le filtre Chèques-Vacances s'applique s'il est coché."}
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
           <label className="flex flex-col gap-1">

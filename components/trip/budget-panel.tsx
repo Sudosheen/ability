@@ -16,6 +16,7 @@ import {
   type Offer,
 } from "@/lib/budget";
 import { getOffer } from "@/lib/data";
+import { FEATURES } from "@/lib/features";
 import type { Trip } from "@/lib/trip";
 import type { Category } from "@/lib/types";
 
@@ -28,8 +29,13 @@ export type FixedPeople = { voyageurs: number; accompagnants: number };
 
 /** Réglages de budget du séjour, avec les personnes du groupe quand elles sont connues. */
 export function budgetOf(trip: Trip, fixed?: FixedPeople): BudgetSettings {
-  return { ...DEFAULT_BUDGET, ...(trip.budget ?? {}), ...(fixed ?? {}) };
+  const s = { ...DEFAULT_BUDGET, ...(trip.budget ?? {}), ...(fixed ?? {}) };
+  // Budget masqué : un montant déjà enregistré ne filtre plus les activités.
+  return FEATURES.budget ? s : { ...s, montant: null };
 }
+
+/** Titre de la rubrique de réglages, selon que le budget est affiché ou non. */
+export const PAYMENT_TITLE = FEATURES.budget ? "Budget et moyens de paiement" : "Moyens de paiement";
 
 /** Nature d'un montant : jamais la couleur seule, toujours une icône et un mot. */
 export function NatureBadge({ nature }: { nature: Nature }) {
@@ -93,7 +99,7 @@ export function OfferLine({ id, c, className }: { id: string; c: Category; class
   }
   return (
     <span className={cn("flex flex-wrap items-center gap-x-3 gap-y-1", className)}>
-      {prix}
+      {FEATURES.budget && prix}
       <ChequesBadge offer={offer} />
     </span>
   );
@@ -176,53 +182,57 @@ export function BudgetSettingsForm({
   const count = (v: string, min: number) => Math.max(min, Math.min(20, Math.round(Number(v)) || min));
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-sm text-ink-700">
-        <strong>Proposition à tester :</strong> le budget porte sur l&apos;itinéraire entier. Les activités et les
-        locations de matériel comptent à leur prix réel ; l&apos;hébergement, les repas et les trajets sont estimés, et
-        signalés comme tels. Dans la maquette, tous les prix sont simulés.
-      </p>
-      <div className="grid gap-4 sm:grid-cols-2">
-        <label className="flex flex-col gap-1">
-          <span className={labelText}>Budget maximum (en euros)</span>
-          <input
-            type="number"
-            inputMode="numeric"
-            min={0}
-            max={MONTANT_MAX}
-            step={50}
-            value={s.montant ?? ""}
-            placeholder="Sans plafond"
-            onChange={(e) =>
-              set({ montant: e.target.value === "" ? null : Math.max(0, Math.min(MONTANT_MAX, Math.round(Number(e.target.value)) || 0)) })
-            }
-            className={input}
-          />
-        </label>
-        <label className="flex flex-col gap-1">
-          <span className={labelText}>Ce budget vaut</span>
-          <select value={s.portee} onChange={(e) => set({ portee: e.target.value === "personne" ? "personne" : "sejour" })} className={`${input} cursor-pointer`}>
-            <option value="sejour">Pour tout le séjour</option>
-            <option value="personne">Par personne (accompagnants compris)</option>
-          </select>
-        </label>
-        {fixed ? (
-          <p className="text-sm text-ink-700 sm:col-span-2">
-            Pour {fixed.voyageurs} résident{fixed.voyageurs > 1 ? "s" : ""} et {fixed.accompagnants} accompagnant
-            {fixed.accompagnants > 1 ? "s" : ""}, d&apos;après le profil du groupe.
+      {FEATURES.budget && (
+        <>
+          <p className="text-sm text-ink-700">
+            <strong>Proposition à tester :</strong> le budget porte sur l&apos;itinéraire entier. Les activités et les
+            locations de matériel comptent à leur prix réel ; l&apos;hébergement, les repas et les trajets sont estimés, et
+            signalés comme tels. Dans la maquette, tous les prix sont simulés.
           </p>
-        ) : (
-          <>
+          <div className="grid gap-4 sm:grid-cols-2">
             <label className="flex flex-col gap-1">
-              <span className={labelText}>Voyageurs en fauteuil</span>
-              <input type="number" min={1} max={20} value={s.voyageurs} onChange={(e) => set({ voyageurs: count(e.target.value, 1) })} className={input} />
+              <span className={labelText}>Budget maximum (en euros)</span>
+              <input
+                type="number"
+                inputMode="numeric"
+                min={0}
+                max={MONTANT_MAX}
+                step={50}
+                value={s.montant ?? ""}
+                placeholder="Sans plafond"
+                onChange={(e) =>
+                  set({ montant: e.target.value === "" ? null : Math.max(0, Math.min(MONTANT_MAX, Math.round(Number(e.target.value)) || 0)) })
+                }
+                className={input}
+              />
             </label>
             <label className="flex flex-col gap-1">
-              <span className={labelText}>Accompagnants</span>
-              <input type="number" min={0} max={20} value={s.accompagnants} onChange={(e) => set({ accompagnants: count(e.target.value, 0) })} className={input} />
+              <span className={labelText}>Ce budget vaut</span>
+              <select value={s.portee} onChange={(e) => set({ portee: e.target.value === "personne" ? "personne" : "sejour" })} className={`${input} cursor-pointer`}>
+                <option value="sejour">Pour tout le séjour</option>
+                <option value="personne">Par personne (accompagnants compris)</option>
+              </select>
             </label>
-          </>
-        )}
-      </div>
+            {fixed ? (
+              <p className="text-sm text-ink-700 sm:col-span-2">
+                Pour {fixed.voyageurs} résident{fixed.voyageurs > 1 ? "s" : ""} et {fixed.accompagnants} accompagnant
+                {fixed.accompagnants > 1 ? "s" : ""}, d&apos;après le profil du groupe.
+              </p>
+            ) : (
+              <>
+                <label className="flex flex-col gap-1">
+                  <span className={labelText}>Voyageurs en fauteuil</span>
+                  <input type="number" min={1} max={20} value={s.voyageurs} onChange={(e) => set({ voyageurs: count(e.target.value, 1) })} className={input} />
+                </label>
+                <label className="flex flex-col gap-1">
+                  <span className={labelText}>Accompagnants</span>
+                  <input type="number" min={0} max={20} value={s.accompagnants} onChange={(e) => set({ accompagnants: count(e.target.value, 0) })} className={input} />
+                </label>
+              </>
+            )}
+          </div>
+        </>
+      )}
       <label className="flex min-h-11 cursor-pointer items-start gap-3 rounded-2xl border border-ink-200 bg-white p-3">
         <input
           type="checkbox"
@@ -274,6 +284,7 @@ export function BudgetSummary({
   rooms?: number;
   levePersonne?: boolean;
 }) {
+  if (!FEATURES.budget) return null;
   const s = budgetOf(trip, fixed);
   const e = estimateTrip(trip, s, { offerOf: getOffer, rooms, levePersonne });
   const status = STATUS[e.statut];

@@ -5,7 +5,8 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, FileText, Plus, Printer, Trash2 } from "lucide-react";
 import { cn } from "cn";
 import { Button } from "@/components/ui/button";
-import { BudgetSettingsForm, BudgetSummary } from "@/components/trip/budget-panel";
+import { BudgetSettingsForm, BudgetSummary, PAYMENT_TITLE } from "@/components/trip/budget-panel";
+import { FEATURES } from "@/lib/features";
 import { LodgingPicker, ProgramEditor, TripSettings } from "@/components/trip/trip-sections";
 import { useEvaluatedPlaces } from "@/components/trip/use-candidates";
 import type { Commune } from "@/lib/data";
@@ -14,7 +15,7 @@ import { describeProfile, LARGEUR_MAX, LARGEUR_MIN, PRESETS, type PresetId } fro
 import { groupStore, groupTripStore, useGroup, useGroupTrip } from "@/lib/storage";
 import { emptyTrip, type Trip } from "@/lib/trip";
 
-const STEPS = ["Profil du groupe", "Destination, dates et budget", "Hébergement", "Itinéraire", "Dossier"];
+const STEPS = ["Profil du groupe", FEATURES.budget ? "Destination, dates et budget" : "Destination et dates", "Hébergement", "Itinéraire", "Dossier"];
 const input = "min-h-11 rounded-full border border-input bg-white px-4 font-bold";
 const GROUP_SUFFIX = "&groupe=1";
 
@@ -188,7 +189,7 @@ export function GroupWizard({ communes }: { communes: Commune[] }) {
             <TripSettings trip={trip} onChange={saveTrip} communes={communes} />
             <section aria-labelledby="titre-budget-groupe" className="flex flex-col gap-3 border-t border-ink-200 pt-6">
               <h3 id="titre-budget-groupe" className="text-2xl">
-                Budget et moyens de paiement
+                {PAYMENT_TITLE}
               </h3>
               <BudgetSettingsForm trip={trip} onChange={saveTrip} fixed={fixed} />
             </section>
