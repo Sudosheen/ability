@@ -22,7 +22,11 @@ const CLUSTER_MAX_ZOOM = 15;
 /** Rayon de détection d'un clic autour d'un marqueur, en pixels (cible de 44 px). */
 const HIT_RADIUS_PX = 22;
 
-export type MapPoint = { id: string; c: Category; look: MarkerLook; coordinates: [number, number] };
+/**
+ * Un lieu à dessiner. `rank` (0 = le premier) suit l'ordre de la liste :
+ * quand des marqueurs se chevauchent, les mieux classés passent au-dessus.
+ */
+export type MapPoint = { id: string; c: Category; look: MarkerLook; coordinates: [number, number]; rank?: number };
 
 /** Où amener la carte. Un nouvel objet déclenche le déplacement. */
 export type MapTarget = { lng: number; lat: number; zoom: number };
@@ -58,7 +62,8 @@ export function MapCanvas({
   focusIds?: string[];
   target: MapTarget | null;
   onSelect: (id: string) => void;
-  onMove?: (bounds: Bounds) => void;
+  /** Emprise après chaque déplacement ; `byUser` vaut vrai si l'utilisateur a déplacé la carte (glisser, zoomer). */
+  onMove?: (bounds: Bounds, byUser: boolean) => void;
   onUnavailable: () => void;
   /** Nom accessible de la région « carte ». */
   label: string;
@@ -70,6 +75,8 @@ export function MapCanvas({
   const [ready, setReady] = useState(false);
   const [spritesReady, setSpritesReady] = useState(false);
   const failed = useRef(false);
+  // Dernière cible déjà appliquée : évite de relancer l'animation vers l'endroit où la carte se trouve.
+  const applied = useRef<MapTarget | null>(null);
 
   const fail = () => {
     if (failed.current) return;
@@ -92,7 +99,8 @@ export function MapCanvas({
 
   // Déplace la carte quand la page demande une nouvelle cible.
   useEffect(() => {
-    if (!ready || !target) return;
+    if (!ready || !target || applied.current === target) return;
+    applied.current = target;
     mapRef.current?.flyTo({ center: [target.lng, target.lat], zoom: target.zoom, duration: 900 });
   }, [ready, target]);
 
@@ -102,7 +110,7 @@ export function MapCanvas({
       features: points.map((p) => ({
         type: "Feature" as const,
         geometry: { type: "Point" as const, coordinates: p.coordinates },
-        properties: { id: p.id, c: p.c, x: p.look },
+        properties: { id: p.id, c: p.c, x: p.look, r: p.rank ?? 0 },
       })),
     }),
     [points],
@@ -121,9 +129,9 @@ export function MapCanvas({
     };
   }, [points, focusKey]);
 
-  const emitBounds = () => {
+  const emitBounds = (byUser: boolean) => {
     const b = mapRef.current?.getBounds();
-    if (b) onMove?.([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()]);
+    if (b) onMove?.([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()], byUser);
   };
 
   const onLoad = () => {
@@ -133,8 +141,11 @@ export function MapCanvas({
     addMarkerImages(map, Math.min(3, Math.ceil(window.devicePixelRatio || 1) + 1))
       .then(() => setSpritesReady(true))
       .catch(() => setSpritesReady(false));
-    if (target) map.jumpTo({ center: [target.lng, target.lat], zoom: target.zoom });
-    emitBounds();
+    if (target) {
+      applied.current = target;
+      map.jumpTo({ center: [target.lng, target.lat], zoom: target.zoom });
+    }
+    emitBounds(false);
   };
 
   const onClick = async (event: MapLayerMouseEvent) => {
@@ -184,7 +195,8 @@ export function MapCanvas({
           onError={(e) => {
             if (/webgl/i.test(String(e.error?.message ?? e.error))) fail();
           }}
-          onMoveEnd={emitBounds}
+          // Seuls les gestes de l'utilisateur portent un événement d'origine ; flyTo et jumpTo n'en ont pas.
+          onMoveEnd={(e) => emitBounds(Boolean(e.originalEvent))}
           onClick={onClick}
           interactiveLayerIds={spritesReady ? ["clusters", "points"] : ["clusters"]}
           cursor="grab"
@@ -248,6 +260,8 @@ export function MapCanvas({
                 layout={{
                   "icon-image": ["concat", "m-", ["get", "c"], "-", ["get", "x"]],
                   "icon-allow-overlap": true,
+                  // MapLibre dessine d'abord les clés basses : le rang 0 doit avoir la clé la plus haute.
+                  "symbol-sort-key": ["-", ["get", "r"]],
                   // Le disque du marqueur est centré sur le lieu, le badge dépasse en haut à droite.
                   "icon-offset": [2, -2],
                   "icon-size": ["interpolate", ["linear"], ["zoom"], 9, 0.72, 14, 1],
