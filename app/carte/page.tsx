@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { AbilityMap } from "@/components/map/ability-map";
+import { ExplorePage } from "@/components/explore/explore-page";
 import { getCommuneList, getMeta } from "@/lib/server-data";
 
 export const metadata: Metadata = {
   title: "Carte des lieux accessibles de l'Hérault",
   description:
-    "Hébergements, restaurants, activités, toilettes et stationnement adapté de l'Hérault, avec l'accessibilité en fauteuil d'après Acceslibre, OpenStreetMap et Tourisme & Handicap.",
+    "Explorer librement la carte : hébergements, restaurants, activités, toilettes et stationnement adapté, avec l'accessibilité en fauteuil d'après Acceslibre, OpenStreetMap et Tourisme & Handicap.",
 };
 
 export default function CartePage() {
   const meta = getMeta();
-  const communes = getCommuneList();
   return (
     <main id="contenu">
       <h1 className="sr-only">Carte des lieux accessibles de l&apos;Hérault</h1>
@@ -23,7 +22,7 @@ export default function CartePage() {
           </p>
         }
       >
-        <AbilityMap communes={communes} categoryCounts={meta.parCategorie} mode="carte" />
+        <ExplorePage communes={getCommuneList()} categoryCounts={meta.parCategorie} />
       </Suspense>
     </main>
   );
