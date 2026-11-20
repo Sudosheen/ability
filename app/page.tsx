@@ -58,7 +58,9 @@ export default function HomePage() {
                   "de ces hébergements n'ont aucune information d'accès fiable",
                 ],
               ].map(([value, label]) => (
-                <div key={label} className="flex flex-col-reverse gap-1">
+                // Libellé avant le chiffre dans le code (dt puis dd), chiffre en haut à l'écran :
+                // justify-end place le contenu en haut avec flex-col-reverse, chiffres alignés.
+                <div key={label} className="flex flex-col-reverse justify-end gap-1">
                   <dt className="text-ink-600">{label}</dt>
                   <dd className="text-4xl font-extrabold tracking-tight">{value}</dd>
                 </div>
