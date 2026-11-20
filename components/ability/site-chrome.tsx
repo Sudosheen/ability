@@ -7,12 +7,15 @@ import type { Meta } from "@/lib/server-data";
 /** Bandeau permanent : la maquette ne doit jamais passer pour un service en production. */
 export function DemoBanner() {
   return (
-    <p role="note" className="print:hidden bg-ink-900 px-4 py-2 text-center text-sm text-white">
-      <span className="mr-2 inline-flex items-center gap-1 rounded-full bg-sun-400 px-2 py-0.5 font-bold text-ink-900">
+    <p
+      role="note"
+      className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 bg-ink-900 px-4 py-2 text-center text-sm text-white print:hidden"
+    >
+      <span className="inline-flex items-center gap-1 rounded-full bg-sun-400 px-2 py-0.5 font-bold text-ink-900">
         <FlaskConical aria-hidden="true" className="size-4" />
         Maquette
       </span>
-      Données ouvertes non vérifiées sur place, et quelques lieux fictifs signalés : ne pas s&apos;en servir pour réserver.
+      <span>Données ouvertes non vérifiées sur place, et quelques lieux fictifs signalés : ne pas s&apos;en servir pour réserver.</span>
     </p>
   );
 }
