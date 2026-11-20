@@ -7,7 +7,7 @@ import type { Commune } from "@/lib/data";
 import { describeProfile } from "@/lib/profile";
 import { tripStore, useProfile, useTrip } from "@/lib/storage";
 import { emptyTrip, type Trip } from "@/lib/trip";
-import { BudgetSettingsForm, BudgetSummary } from "./budget-panel";
+import { BudgetSettingsForm, BudgetSummary, PAYMENT_TITLE } from "./budget-panel";
 import { LodgingPicker, ProgramEditor, TripSettings } from "./trip-sections";
 import { useEvaluatedPlaces } from "./use-candidates";
 
@@ -70,7 +70,7 @@ export function TripPlanner({ communes }: { communes: Commune[] }) {
         <TripSettings trip={trip} onChange={save} communes={communes} />
       </Step>
 
-      <Step n={2} title="Budget et moyens de paiement">
+      <Step n={2} title={PAYMENT_TITLE}>
         <BudgetSettingsForm trip={trip} onChange={save} />
       </Step>
 
