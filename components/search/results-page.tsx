@@ -111,15 +111,27 @@ export function ResultsPage({ communes }: { communes: Commune[] }) {
   const shown = results.slice(0, limit);
   const selected = selectedId ? results.find((r) => r.feature.properties.id === selectedId) : undefined;
 
+  // La carte montre les mêmes résultats que la liste, dans le même ordre :
+  // le tri et « Afficher plus » s'y appliquent aussi.
   const points: MapPoint[] = useMemo(
     () =>
-      results.map((r) => ({
+      results.slice(0, limit).map((r, rank) => ({
         id: r.feature.properties.id,
         c: r.feature.properties.c,
         look: byProfile && r.evaluation ? COMPAT_LOOK[r.evaluation.statut] : r.feature.properties.a,
         coordinates: r.feature.geometry.coordinates,
+        rank,
       })),
-    [results, byProfile],
+    [results, limit, byProfile],
+  );
+
+  const showMore = results.length > shown.length && (
+    <Button variant="outline" className="flex-wrap self-center" onClick={() => setLimit((l) => l + PAGE)}>
+      Afficher {Math.min(PAGE, results.length - shown.length)} résultats de plus
+      <span className="font-normal text-ink-600">
+        ({shown.length} sur {results.length})
+      </span>
+    </Button>
   );
 
   const search = (query: string) => {
@@ -310,20 +322,17 @@ export function ResultsPage({ communes }: { communes: Commune[] }) {
                   </li>
                 ))}
               </ol>
-              {results.length > shown.length && (
-                <Button
-                  variant="outline"
-                  className="flex-wrap self-center"
-                  onClick={() => setLimit((l) => l + PAGE)}
-                >
-                  Afficher {Math.min(PAGE, results.length - shown.length)} résultats de plus
-                  <span className="font-normal text-ink-600">
-                    ({shown.length} sur {results.length})
-                  </span>
-                </Button>
-              )}
+              {showMore}
             </>
           ) : (
+            <>
+            {results.length > 0 && (
+              <p className="text-ink-700">
+                {shown.length < results.length
+                  ? `Les ${shown.length} premiers résultats, triés par « ${SORT_LABELS[sortKey].toLowerCase()} », comme dans la liste.`
+                  : `Les ${results.length} résultats, comme dans la liste.`}
+              </p>
+            )}
             <div className="relative h-[70dvh] min-h-96 overflow-hidden rounded-2xl border border-ink-200">
               <MapCanvas
                 points={points}
@@ -359,6 +368,8 @@ export function ResultsPage({ communes }: { communes: Commune[] }) {
                 </div>
               )}
             </div>
+            {showMore}
+            </>
           )}
         </section>
       </div>

@@ -22,7 +22,11 @@ const CLUSTER_MAX_ZOOM = 15;
 /** Rayon de détection d'un clic autour d'un marqueur, en pixels (cible de 44 px). */
 const HIT_RADIUS_PX = 22;
 
-export type MapPoint = { id: string; c: Category; look: MarkerLook; coordinates: [number, number] };
+/**
+ * Un lieu à dessiner. `rank` (0 = le premier) suit l'ordre de la liste :
+ * quand des marqueurs se chevauchent, les mieux classés passent au-dessus.
+ */
+export type MapPoint = { id: string; c: Category; look: MarkerLook; coordinates: [number, number]; rank?: number };
 
 /** Où amener la carte. Un nouvel objet déclenche le déplacement. */
 export type MapTarget = { lng: number; lat: number; zoom: number };
@@ -102,7 +106,7 @@ export function MapCanvas({
       features: points.map((p) => ({
         type: "Feature" as const,
         geometry: { type: "Point" as const, coordinates: p.coordinates },
-        properties: { id: p.id, c: p.c, x: p.look },
+        properties: { id: p.id, c: p.c, x: p.look, r: p.rank ?? 0 },
       })),
     }),
     [points],
@@ -248,6 +252,8 @@ export function MapCanvas({
                 layout={{
                   "icon-image": ["concat", "m-", ["get", "c"], "-", ["get", "x"]],
                   "icon-allow-overlap": true,
+                  // MapLibre dessine d'abord les clés basses : le rang 0 doit avoir la clé la plus haute.
+                  "symbol-sort-key": ["-", ["get", "r"]],
                   // Le disque du marqueur est centré sur le lieu, le badge dépasse en haut à droite.
                   "icon-offset": [2, -2],
                   "icon-size": ["interpolate", ["linear"], ["zoom"], 9, 0.72, 14, 1],
