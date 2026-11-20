@@ -90,6 +90,8 @@ export function ResultsPage({ communes }: { communes: Commune[] }) {
   const [limit, setLimit] = useState(PAGE);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [mapBounds, setMapBounds] = useState<Bounds | null>(null);
+  // Vrai dès que l'utilisateur déplace la carte lui-même, remis à faux à chaque nouvelle recherche.
+  const [userMoved, setUserMoved] = useState(false);
   const [mapUnavailable, setMapUnavailable] = useState(false);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -144,6 +146,7 @@ export function ResultsPage({ communes }: { communes: Commune[] }) {
     setWhereMessage("");
     setZone({ lat: c.lat, lng: c.lng, km: zone?.km ?? 10, nom: c.nom });
     setTarget({ lng: c.lng, lat: c.lat, zoom: 12 });
+    setUserMoved(false);
     setLimit(PAGE);
     setSelectedId(null);
   };
@@ -152,12 +155,17 @@ export function ResultsPage({ communes }: { communes: Commune[] }) {
     if (!mapBounds) return;
     const c = boundsCenter(mapBounds);
     setZone({ ...c, km: Math.max(1, Math.round(boundsRadiusKm(mapBounds))), nom: "la zone affichée" });
+    setUserMoved(false);
     setLimit(PAGE);
     setSelectedId(null);
   };
 
+  // Le bouton « Rechercher dans cette zone » n'apparaît qu'après un déplacement fait par l'utilisateur.
   const moved =
-    mapBounds && zone && (Math.abs(boundsCenter(mapBounds).lat - zone.lat) > 0.01 || Math.abs(boundsCenter(mapBounds).lng - zone.lng) > 0.01);
+    userMoved &&
+    mapBounds &&
+    zone &&
+    (Math.abs(boundsCenter(mapBounds).lat - zone.lat) > 0.01 || Math.abs(boundsCenter(mapBounds).lng - zone.lng) > 0.01);
   const sortKeys: SortKey[] = byProfile ? ["compatible", "verifie", "proche"] : ["verifie", "proche"];
   const zoneName = zone?.nom === "la zone affichée" ? "son centre" : (zone?.nom ?? "");
 
@@ -339,7 +347,10 @@ export function ResultsPage({ communes }: { communes: Commune[] }) {
                 focusIds={[selectedId, hoveredId].filter((x): x is string => Boolean(x))}
                 target={target}
                 onSelect={setSelectedId}
-                onMove={setMapBounds}
+                onMove={(bounds, byUser) => {
+                  setMapBounds(bounds);
+                  if (byUser) setUserMoved(true);
+                }}
                 onUnavailable={() => setMapUnavailable(true)}
                 label="Carte des résultats. Les mêmes résultats sont dans la liste."
                 cluster={false}

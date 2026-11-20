@@ -62,7 +62,8 @@ export function MapCanvas({
   focusIds?: string[];
   target: MapTarget | null;
   onSelect: (id: string) => void;
-  onMove?: (bounds: Bounds) => void;
+  /** Emprise après chaque déplacement ; `byUser` vaut vrai si l'utilisateur a déplacé la carte (glisser, zoomer). */
+  onMove?: (bounds: Bounds, byUser: boolean) => void;
   onUnavailable: () => void;
   /** Nom accessible de la région « carte ». */
   label: string;
@@ -74,6 +75,8 @@ export function MapCanvas({
   const [ready, setReady] = useState(false);
   const [spritesReady, setSpritesReady] = useState(false);
   const failed = useRef(false);
+  // Dernière cible déjà appliquée : évite de relancer l'animation vers l'endroit où la carte se trouve.
+  const applied = useRef<MapTarget | null>(null);
 
   const fail = () => {
     if (failed.current) return;
@@ -96,7 +99,8 @@ export function MapCanvas({
 
   // Déplace la carte quand la page demande une nouvelle cible.
   useEffect(() => {
-    if (!ready || !target) return;
+    if (!ready || !target || applied.current === target) return;
+    applied.current = target;
     mapRef.current?.flyTo({ center: [target.lng, target.lat], zoom: target.zoom, duration: 900 });
   }, [ready, target]);
 
@@ -125,9 +129,9 @@ export function MapCanvas({
     };
   }, [points, focusKey]);
 
-  const emitBounds = () => {
+  const emitBounds = (byUser: boolean) => {
     const b = mapRef.current?.getBounds();
-    if (b) onMove?.([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()]);
+    if (b) onMove?.([b.getWest(), b.getSouth(), b.getEast(), b.getNorth()], byUser);
   };
 
   const onLoad = () => {
@@ -137,8 +141,11 @@ export function MapCanvas({
     addMarkerImages(map, Math.min(3, Math.ceil(window.devicePixelRatio || 1) + 1))
       .then(() => setSpritesReady(true))
       .catch(() => setSpritesReady(false));
-    if (target) map.jumpTo({ center: [target.lng, target.lat], zoom: target.zoom });
-    emitBounds();
+    if (target) {
+      applied.current = target;
+      map.jumpTo({ center: [target.lng, target.lat], zoom: target.zoom });
+    }
+    emitBounds(false);
   };
 
   const onClick = async (event: MapLayerMouseEvent) => {
@@ -188,7 +195,8 @@ export function MapCanvas({
           onError={(e) => {
             if (/webgl/i.test(String(e.error?.message ?? e.error))) fail();
           }}
-          onMoveEnd={emitBounds}
+          // Seuls les gestes de l'utilisateur portent un événement d'origine ; flyTo et jumpTo n'en ont pas.
+          onMoveEnd={(e) => emitBounds(Boolean(e.originalEvent))}
           onClick={onClick}
           interactiveLayerIds={spritesReady ? ["clusters", "points"] : ["clusters"]}
           cursor="grab"
