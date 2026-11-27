@@ -47,3 +47,6 @@ next-env.d.ts
 /data/work/
 # Export national d'Acceslibre, supprimé après filtrage sur l'Hérault.
 /data/raw/acceslibre/acceslibre-national.csv
+
+# Graphe de connaissances Graphify (/graphify) : produit localement, régénérable.
+/graphify-out/
